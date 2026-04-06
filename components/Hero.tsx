@@ -46,7 +46,7 @@ export default function Hero() {
             </h1>
 
             <p ref={textRef} style={{ fontFamily: 'var(--font-instrument)', fontSize: 17, lineHeight: 1.8, color: 'var(--ink-600)', marginBottom: 40, maxWidth: 460 }}>
-              MieterPilot gibt Geschäftsführern mittelständischer Hausverwaltungen vollständige Betriebsübersicht — automatisierte Mieterkommunikation, proprietäres Dashboard, keine neue Software für Ihr Team.
+              MieterPilot gibt mittelständischen Hausverwaltungen vollständige Betriebsübersicht — automatisierte Mieterkommunikation, einfaches Web-Dashboard von uns bereitgestellt, keine Schulungen für Ihr Team.
             </p>
 
             <div ref={ctaRef} className="hero-cta-row" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 44 }}>
@@ -56,7 +56,7 @@ export default function Hero() {
 
             <div ref={trustRef} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {[
-                { icon: <Server size={14} aria-hidden="true" />, text: 'Proprietäres Dashboard — Ihre Daten, Ihre Kontrolle' },
+                { icon: <Server size={14} aria-hidden="true" />, text: 'Web-Dashboard von uns — einfach als Web-App erreichbar' },
                 { icon: <ShieldCheck size={14} aria-hidden="true" />, text: 'AVV nach Art. 28 DSGVO standardmäßig inklusive' },
                 { icon: <Users size={14} aria-hidden="true" />, text: 'Keine neue Software, keine Schulungen für Ihr Team' },
               ].map((t, i) => (
@@ -91,7 +91,7 @@ export default function Hero() {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1, background: 'var(--obsidian-border)' }}>
                 {[
                   { label: 'Anrufe heute', value: '47', color: 'var(--brass)' },
-                  { label: 'Eskaliationen', value: '3', color: '#F87171' },
+                  { label: 'Eskalationen', value: '3', color: '#F87171' },
                   { label: 'Ø Antwortzeit', value: '8.2s', color: 'var(--brass-light)' },
                   { label: 'Erledigt', value: '44', color: '#4ADE80' },
                 ].map((k, i) => (

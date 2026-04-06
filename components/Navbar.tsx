@@ -51,6 +51,7 @@ export default function Navbar() {
           {[
             { label: 'Dashboard', href: '#dashboard' },
             { label: 'ROI-Rechner', href: '#roi' },
+            { label: 'Preise', href: '/preise' },
             { label: 'Über uns', href: '#team' },
           ].map(l => (
             <a key={l.href} href={l.href} style={{ color: 'var(--ink-400)', fontSize: 13.5, fontWeight: 500, textDecoration: 'none', fontFamily: 'var(--font-instrument)', transition: 'color 0.2s', letterSpacing: '0.01em' }}
@@ -77,6 +78,7 @@ export default function Navbar() {
           {[
             { label: 'Dashboard', href: '#dashboard' },
             { label: 'ROI-Rechner', href: '#roi' },
+            { label: 'Preise', href: '/preise' },
             { label: 'Über uns', href: '#team' },
           ].map(l => (
             <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}

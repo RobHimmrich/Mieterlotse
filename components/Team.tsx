@@ -43,12 +43,13 @@ export default function Team() {
             {/* Photo */}
             <div style={{ marginBottom: 20, display: 'flex', justifyContent: 'center' }}>
               <div style={{ padding: 3, background: 'linear-gradient(135deg, var(--brass), var(--brass-light))', borderRadius: '50%', display: 'inline-block' }}>
-                <div style={{ width: 88, height: 88, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(184,148,58,0.15), rgba(212,173,92,0.1))', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Foto von Robin Himmrich">
-                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true">
-                    <circle cx="25" cy="19" r="10" fill="rgba(184,148,58,0.35)" />
-                    <path d="M5 44c0-11.046 8.954-20 20-20s20 8.954 20 20" stroke="rgba(184,148,58,0.35)" strokeWidth="3.5" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <img
+                  src="/robin-himmrich.jpg"
+                  alt="Robin Himmrich, Gründer MieterPilot"
+                  width={88}
+                  height={88}
+                  style={{ width: 88, height: 88, borderRadius: '50%', objectFit: 'cover', display: 'block' }}
+                />
               </div>
             </div>
 
