@@ -6,7 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const benefits = [
-  { icon: <BarChart3 size={16} aria-hidden="true" />, title: 'Alles an einem Ort', text: 'Anrufe, E-Mails, Eskaliationen und Auswertungen — übersichtlich in einem einzigen Dashboard zusammengefasst.' },
+  { icon: <BarChart3 size={16} aria-hidden="true" />, title: 'Alles an einem Ort', text: 'Anrufe, E-Mails, Eskalationen und Auswertungen — übersichtlich in einem einzigen Dashboard zusammengefasst.' },
   { icon: <Bell size={16} aria-hidden="true" />, title: 'Keine Einarbeitung notwendig', text: 'Das Dashboard ist bewusst einfach gehalten. Keine Schulungen, keine IT-Kenntnisse erforderlich — sofort einsatzbereit.' },
   { icon: <CheckCircle2 size={16} aria-hidden="true" />, title: 'Von uns eingerichtet und betreut', text: 'Wir kümmern uns um Einrichtung, Updates und Support. Sie müssen sich um nichts kümmern.' },
   { icon: <Lock size={16} aria-hidden="true" />, title: 'DSGVO-konform & sicher', text: 'Alle Daten werden auf EU-Servern gespeichert. Kein Drittanbieter-Zugriff, AVV nach Art. 28 DSGVO inklusive.' },
@@ -81,7 +81,7 @@ export default function DashboardSection() {
               <div style={{ padding: '0 18px 14px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
                 {[
                   { label: 'Automatisch gelöst', value: '70%', icon: '✓', color: 'var(--green-ok)' },
-                  { label: 'Eskaliationen heute', value: '3', icon: '!', color: '#F87171' },
+                  { label: 'Eskalationen heute', value: '3', icon: '!', color: '#F87171' },
                 ].map((c, i) => (
                   <div key={i} style={{ background: 'var(--obsidian)', border: '1px solid var(--obsidian-border)', borderRadius: 8, padding: '12px 14px', display: 'flex', gap: 10, alignItems: 'center' }}>
                     <div style={{ width: 28, height: 28, borderRadius: 6, background: 'rgba(255,255,255,0.04)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: c.color, flexShrink: 0 }} aria-hidden="true">{c.icon}</div>
@@ -103,7 +103,7 @@ export default function DashboardSection() {
               Einfach. Übersichtlich.<br /><em style={{ fontStyle: 'italic', color: 'var(--brass)' }}>Ohne Schulungen.</em>
             </h2>
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: 16, lineHeight: 1.8, color: 'rgba(255,255,255,0.65)', marginBottom: 36 }}>
-              Wir stellen Ihnen ein klares Dashboard bereit — kein Schulungsaufwand, keine IT-Abteilung nötig. Alle Vorgänge, Anrufe und Eskaliationen an einem einzigen Ort.
+              Wir stellen Ihnen ein klares Dashboard bereit — kein Schulungsaufwand, keine IT-Abteilung nötig. Alle Vorgänge, Anrufe und Eskalationen an einem einzigen Ort.
             </p>
 
             <div className="db-benefits" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>

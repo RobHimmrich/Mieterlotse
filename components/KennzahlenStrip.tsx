@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const kpis = [
-  { number: '12+', unit: 'Std./Woche', label: 'gespart pro Verwaltung', sub: 'bei Ø 300 Einheiten' },
+  { number: '16+', unit: 'Std./Woche', label: 'gespart pro Verwaltung', sub: 'bei Ø 300 Einheiten' },
   { number: '70%', unit: '', label: 'Anfragen automatisch gelöst', sub: 'lt. McKinsey AI-Studie 2023' },
   { number: '< 20', unit: 'Sek.', label: 'Reaktionszeit per Mail', sub: 'Direkt per Anruf, 24/7' },
   { number: '100%', unit: '', label: 'Vorgänge dokumentiert', sub: 'im Dashboard, jederzeit abrufbar' },

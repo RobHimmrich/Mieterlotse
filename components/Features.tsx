@@ -12,7 +12,7 @@ const cards = [
     iconBg: 'var(--brass-pale)',
     iconBorder: 'var(--brass-border)',
     title: 'Vollständige Betriebsübersicht',
-    text: 'Unser Dashboard zeigt alle Objekte, Anrufe, E-Mails und Eskaliationen in Echtzeit. Einfach gehalten, ohne Schulungen bedienbar — Sie sehen auf einen Blick, was in Ihrer gesamten Verwaltung passiert.',
+    text: 'Unser Dashboard zeigt alle Objekte, Anrufe, E-Mails und Eskalationen in Echtzeit. Einfach gehalten, ohne Schulungen bedienbar — Sie sehen auf einen Blick, was in Ihrer gesamten Verwaltung passiert.',
   },
   {
     icon: <SlidersHorizontal size={21} aria-hidden="true" />,

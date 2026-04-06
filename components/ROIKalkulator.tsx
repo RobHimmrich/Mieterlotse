@@ -8,10 +8,10 @@ export default function ROIKalkulator() {
   const [units, setUnits] = useState(300)
   const sectionRef = useRef<HTMLElement>(null)
 
-  const hoursPerWeek = Math.round((units / 300) * 12)
+  const hoursPerWeek = Math.round((units / 300) * 16)
   const hourlyRate = 38 // EUR, typical German office staff cost
   const grossMonthlySavings = Math.round(hoursPerWeek * 4.33 * hourlyRate)
-  const subscriptionCost = 799
+  const subscriptionCost = 890
   const monthlySavings = Math.max(0, grossMonthlySavings - subscriptionCost)
   const yearlySavings = monthlySavings * 12
 
@@ -35,7 +35,7 @@ export default function ROIKalkulator() {
               Was kostet Ihre Routine-Kommunikation wirklich?
             </h2>
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: 16, lineHeight: 1.75, color: 'var(--ink-600)', maxWidth: 560, margin: '0 auto' }}>
-              Hausverwaltungen verlieren durchschnittlich 15 Stunden pro Woche mit Routine-Kommunikation. Berechnen Sie Ihr Einsparpotenzial.
+              Hausverwaltungen verlieren durchschnittlich 15 Stunden pro Woche mit Routine-Kommunikation, obwohl diese Zeit bei anderen Aufgaben besser aufgehoben wäre. Berechnen Sie Ihr Einsparpotenzial.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export default function ROIKalkulator() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
               {[
                 { label: 'Stunden gespart / Woche', value: `${hoursPerWeek}+`, sublabel: 'durch KI-Automatisierung', highlight: false },
-                { label: 'Netto-Einsparung / Monat', value: `${monthlySavings.toLocaleString('de-DE')} €`, sublabel: 'nach Abzug MieterPilot-Abo (799 €)', highlight: true },
+                { label: 'Netto-Einsparung / Monat', value: `${monthlySavings.toLocaleString('de-DE')} €`, sublabel: 'nach Abzug MieterPilot-Abo (890 €)', highlight: true },
                 { label: 'Netto-Einsparung / Jahr', value: `${yearlySavings.toLocaleString('de-DE')} €`, sublabel: 'ohne neue Mitarbeiter', highlight: false },
               ].map((r, i) => (
                 <div key={i} style={{ textAlign: 'center', padding: '24px 16px', background: r.highlight ? 'var(--obsidian)' : 'var(--bg-surface)', borderRadius: 10, border: r.highlight ? '1px solid var(--brass)' : '1px solid rgba(184,148,58,0.1)' }}>
@@ -90,7 +90,7 @@ export default function ROIKalkulator() {
             {/* Disclaimer + CTA */}
             <div style={{ marginTop: 32, paddingTop: 24, borderTop: '1px solid rgba(184,148,58,0.12)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
               <p style={{ fontFamily: 'var(--font-instrument)', fontSize: 12, color: 'var(--ink-400)', maxWidth: 360 }}>
-                Basierend auf Ø 1,5 Anfragen/Einheit/Monat · 15 Min./Anfrage · 70% Automatisierungsquote · abzgl. 799 €/Monat MieterPilot-Abo. Individuelle Kalkulation im Gespräch.
+                Basierend auf Ø 1,5 Anfragen/Einheit/Monat · 20 Min./Anfrage · 70% Automatisierungsquote · abzgl. 890 €/Monat MieterPilot-Abo (Professional). Individuelle Kalkulation im Gespräch.
               </p>
               <a href="#contact" className="btn-obsidian" style={{ fontSize: 13.5 }}>
                 Individuellen ROI berechnen →
