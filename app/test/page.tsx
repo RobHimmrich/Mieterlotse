@@ -46,7 +46,6 @@ export default function TestPage() {
 
             {/* Demo-Kontext Badge */}
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '12px 20px', background: 'var(--obsidian-card)', border: '1px solid var(--obsidian-border)', borderRadius: 10 }}>
-              <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#4ADE80', boxShadow: '0 0 8px #4ADE80', flexShrink: 0 }} aria-hidden="true" />
               <span style={{ fontFamily: 'var(--font-instrument)', fontSize: 13, color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>
                 Demo-Unternehmen: <strong style={{ color: '#fff' }}>Optio GmbH</strong> · vollständige Wissensdatenbank aktiv
               </span>

@@ -40,7 +40,7 @@ export default function ROIKalkulator() {
           </div>
 
           {/* Calculator card */}
-          <div style={{ background: 'var(--white)', border: '1px solid rgba(184,148,58,0.15)', borderRadius: 14, padding: '44px 48px', boxShadow: '0 8px 40px rgba(26,22,18,0.06)' }}>
+          <div className="roi-calc-card" style={{ background: 'var(--white)', border: '1px solid rgba(184,148,58,0.15)', borderRadius: 14, padding: '44px 48px', boxShadow: '0 8px 40px rgba(26,22,18,0.06)' }}>
             {/* Slider */}
             <div style={{ marginBottom: 48 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16 }}>
@@ -71,7 +71,7 @@ export default function ROIKalkulator() {
             </div>
 
             {/* Results */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+            <div className="roi-results" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
               {[
                 { label: 'Stunden gespart / Woche', value: `${hoursPerWeek}+`, sublabel: 'durch KI-Automatisierung', highlight: false },
                 { label: 'Netto-Einsparung / Monat', value: `${monthlySavings.toLocaleString('de-DE')} €`, sublabel: 'nach Abzug Mieterlotse-Abo (890 €)', highlight: true },

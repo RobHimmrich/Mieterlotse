@@ -399,6 +399,13 @@ html, body {
   .contact-grid-2 { grid-template-columns: 1fr !important; }
   .kpi-strip { grid-template-columns: 1fr 1fr !important; }
 
+  /* KPI-Karten gleich hoch */
+  .kpi-item { min-height: 160px; }
+
+  /* ROI-Kalkulator: Ergebniskarten untereinander, Padding reduzieren */
+  .roi-results { grid-template-columns: 1fr !important; }
+  .roi-calc-card { padding: 28px 20px !important; }
+
   /* Dashboard-Tabelle: unwichtige Spalten ausblenden */
   .dashboard-table-row > div:nth-child(n+3) { display: none; }
 
