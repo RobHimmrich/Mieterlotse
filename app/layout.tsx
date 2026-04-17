@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Fraunces, Instrument_Sans } from 'next/font/google'
 import './globals.css'
+import CookieBanner from '@/components/CookieBanner'
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -18,18 +19,18 @@ const instrumentSans = Instrument_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'MieterPilot — Betriebssteuerung für mittelständische Hausverwaltungen',
+  title: 'Mieterlotse — Betriebssteuerung für mittelständische Hausverwaltungen',
   description:
     'Vollständige Betriebsübersicht für Geschäftsführer: KI-gestützte Mieterkommunikation, proprietäres Dashboard und 12+ Stunden Ersparnis pro Woche. DSGVO-konform, kein Systemwechsel.',
   metadataBase: new URL('https://immobilienverwaltung-automation.com'),
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'MieterPilot — Betriebssteuerung für Hausverwaltungen',
+    title: 'Mieterlotse — Betriebssteuerung für Hausverwaltungen',
     description:
       'KI-Mieterkommunikation mit eigenem Dashboard. Volle Kontrolle, keine neue Software. Für Geschäftsführer mittelständischer Hausverwaltungen.',
     url: 'https://immobilienverwaltung-automation.com',
-    siteName: 'MieterPilot',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'MieterPilot Dashboard' }],
+    siteName: 'Mieterlotse',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Mieterlotse Dashboard' }],
     locale: 'de_DE',
     type: 'website',
   },
@@ -53,7 +54,7 @@ const faqSchema = {
       name: 'Können meine bestehenden Systeme angebunden werden?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Ja. MieterPilot ist kompatibel mit gängigen Hausverwaltungssystemen wie DOMUS, Haufe und iX-Haus. Sie müssen keine bestehende Software ersetzen oder Ihr Team umschulen.',
+        text: 'Ja. Mieterlotse ist kompatibel mit gängigen Hausverwaltungssystemen wie DOMUS, Haufe und iX-Haus. Sie müssen keine bestehende Software ersetzen oder Ihr Team umschulen.',
       },
     },
     {
@@ -74,7 +75,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Wie skaliert MieterPilot mit meinem Portfolio?',
+      name: 'Wie skaliert Mieterlotse mit meinem Portfolio?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Das System skaliert linear mit Ihrem Portfolio. Wachsen Sie von 300 auf 600 Einheiten, verdoppelt sich die Kapazität automatisch — ohne neue Mitarbeiter einstellen zu müssen. Das Dashboard passt sich entsprechend an.',
@@ -86,7 +87,7 @@ const faqSchema = {
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'MieterPilot',
+  name: 'Mieterlotse',
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   url: 'https://immobilienverwaltung-automation.com',
@@ -105,6 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <a href="#main-content" className="skip-link">Zum Hauptinhalt springen</a>
         {children}
+        <CookieBanner />
       </body>
     </html>
   )

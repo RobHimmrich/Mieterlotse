@@ -9,6 +9,7 @@ import Referenzen from '@/components/Referenzen'
 import IntegrationsRow from '@/components/IntegrationsRow'
 import FAQ from '@/components/FAQ'
 import Team from '@/components/Team'
+import LiveDemoTeaser from '@/components/LiveDemoTeaser'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 
@@ -27,6 +28,7 @@ export default function HomePage() {
         <IntegrationsRow />
         <FAQ />
         <Team />
+        <LiveDemoTeaser />
         <Contact />
       </main>
       <Footer />

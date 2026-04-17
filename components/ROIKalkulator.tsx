@@ -74,7 +74,7 @@ export default function ROIKalkulator() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
               {[
                 { label: 'Stunden gespart / Woche', value: `${hoursPerWeek}+`, sublabel: 'durch KI-Automatisierung', highlight: false },
-                { label: 'Netto-Einsparung / Monat', value: `${monthlySavings.toLocaleString('de-DE')} €`, sublabel: 'nach Abzug MieterPilot-Abo (890 €)', highlight: true },
+                { label: 'Netto-Einsparung / Monat', value: `${monthlySavings.toLocaleString('de-DE')} €`, sublabel: 'nach Abzug Mieterlotse-Abo (890 €)', highlight: true },
                 { label: 'Netto-Einsparung / Jahr', value: `${yearlySavings.toLocaleString('de-DE')} €`, sublabel: 'ohne neue Mitarbeiter', highlight: false },
               ].map((r, i) => (
                 <div key={i} style={{ textAlign: 'center', padding: '24px 16px', background: r.highlight ? 'var(--obsidian)' : 'var(--bg-surface)', borderRadius: 10, border: r.highlight ? '1px solid var(--brass)' : '1px solid rgba(184,148,58,0.1)' }}>
@@ -90,10 +90,10 @@ export default function ROIKalkulator() {
             {/* Disclaimer + CTA */}
             <div style={{ marginTop: 32, paddingTop: 24, borderTop: '1px solid rgba(184,148,58,0.12)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
               <p style={{ fontFamily: 'var(--font-instrument)', fontSize: 12, color: 'var(--ink-400)', maxWidth: 360 }}>
-                Basierend auf Ø 1,5 Anfragen/Einheit/Monat · 20 Min./Anfrage · 70% Automatisierungsquote · abzgl. 890 €/Monat MieterPilot-Abo (Professional). Individuelle Kalkulation im Gespräch.
+                Basierend auf Ø 1,5 Anfragen/Einheit/Monat · 20 Min./Anfrage · 70% Automatisierungsquote · abzgl. 890 €/Monat Mieterlotse-Abo (Professional). Individuelle Kalkulation im Gespräch.
               </p>
-              <a href="#contact" className="btn-obsidian" style={{ fontSize: 13.5 }}>
-                Individuellen ROI berechnen →
+              <a href="https://calendly.com/robin-himmrich/30min" target="_blank" rel="noopener noreferrer" className="btn-obsidian" style={{ fontSize: 13.5 }}>
+                Erstgespräch buchen →
               </a>
             </div>
           </div>

@@ -27,11 +27,13 @@ export default function DatenschutzPage() {
           <p style={{ ...p, marginBottom: 4, fontWeight: 600, color: 'var(--ink-900)' }}>Verantwortlicher im Sinne der DSGVO</p>
           <p style={{ ...p, marginBottom: 0, fontSize: 14 }}>
             Immobilienverwaltung Automation · Robin Himmrich<br />
-            Servidão Beco dos Surfistas 602, Lagoa da Conceição<br />
-            Florianópolis – SC, 88062-620, Brasilien<br />
+            c/o Autorenglück #96528<br />
+            Albert-Einstein-Str. 47<br />
+            02977 Hoyerswerda<br />
+            Deutschland<br />
             E-Mail:{' '}
-            <a href="mailto:info@immobilienverwaltung-automatisieren.com" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-              info@immobilienverwaltung-automatisieren.com
+            <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
+              info@immobilienverwaltung-automation.de
             </a>
           </p>
         </div>
@@ -89,8 +91,8 @@ export default function DatenschutzPage() {
         </p>
         <p style={p}>
           Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie uns eine E-Mail an{' '}
-          <a href="mailto:info@immobilienverwaltung-automatisieren.com" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-            info@immobilienverwaltung-automatisieren.com
+          <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
+            info@immobilienverwaltung-automation.de
           </a>{' '}
           senden.
         </p>
@@ -100,7 +102,7 @@ export default function DatenschutzPage() {
         {/* 4 */}
         <h2 style={h2}>4. Nutzung unserer Dienstleistungen (Dashboard & KI-System)</h2>
         <p style={p}>
-          Im Rahmen der Nutzung von MieterPilot verarbeiten wir personenbezogene Daten Ihrer Mieter und Verwaltungsvorgänge. Für diese Verarbeitung schließen wir mit Ihnen als Auftraggeber einen <strong>Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO</strong>, der Gegenstand eines separaten Vertragsdokuments ist.
+          Im Rahmen der Nutzung von Mieterlotse verarbeiten wir personenbezogene Daten Ihrer Mieter und Verwaltungsvorgänge. Für diese Verarbeitung schließen wir mit Ihnen als Auftraggeber einen <strong>Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO</strong>, der Gegenstand eines separaten Vertragsdokuments ist.
         </p>
         <p style={p}>
           <strong>Verarbeitete Datenkategorien:</strong> Namen und Kontaktdaten von Mietern, Kommunikationsinhalte (Anrufe, E-Mails), Vorgangsdaten, Zeitstempel und Protokolle.
@@ -144,8 +146,8 @@ export default function DatenschutzPage() {
         </ul>
         <p style={p}>
           Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:{' '}
-          <a href="mailto:info@immobilienverwaltung-automatisieren.com" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-            info@immobilienverwaltung-automatisieren.com
+          <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
+            info@immobilienverwaltung-automation.de
           </a>
         </p>
 
@@ -179,8 +181,8 @@ export default function DatenschutzPage() {
         <div style={{ marginTop: 48, padding: '20px 24px', background: 'rgba(184,148,58,0.05)', border: '1px solid rgba(184,148,58,0.12)', borderRadius: 10 }}>
           <p style={{ ...p, marginBottom: 0, fontSize: 13, color: 'var(--ink-400)' }}>
             Bei Fragen zum Datenschutz stehen wir Ihnen jederzeit zur Verfügung:<br />
-            <a href="mailto:info@immobilienverwaltung-automatisieren.com" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-              info@immobilienverwaltung-automatisieren.com
+            <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
+              info@immobilienverwaltung-automation.de
             </a>
           </p>
         </div>

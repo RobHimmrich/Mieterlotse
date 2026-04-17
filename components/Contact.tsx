@@ -15,9 +15,13 @@ interface FormData {
   privacy: boolean
 }
 
+const FORMSPREE_URL = 'https://formspree.io/f/mzdyzyde'
+
 export default function Contact() {
   const [formData, setFormData] = useState<FormData>({ firstName: '', lastName: '', email: '', phone: '', units: '', software: '', privacy: false })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [sendError, setSendError] = useState(false)
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({})
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -39,12 +43,36 @@ export default function Contact() {
     return e
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length > 0) { setErrors(errs); return }
     setErrors({})
-    setSubmitted(true)
+    setSending(true)
+    setSendError(false)
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          vorname: formData.firstName,
+          nachname: formData.lastName,
+          email: formData.email,
+          telefon: formData.phone || '—',
+          einheiten: formData.units,
+          software: formData.software || '—',
+        }),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setSendError(true)
+      }
+    } catch {
+      setSendError(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -146,8 +174,13 @@ export default function Contact() {
                 {errors.privacy && <div style={{ ...errorStyle, marginLeft: 29 }} role="alert">{errors.privacy}</div>}
               </div>
 
-              <button type="submit" className="btn-brass-solid">
-                Strategie-Gespräch anfragen →
+              {sendError && (
+                <div style={{ marginBottom: 16, padding: '12px 16px', background: 'rgba(248,113,113,0.1)', border: '1px solid rgba(248,113,113,0.3)', borderRadius: 8, fontSize: 13, color: '#F87171', fontFamily: 'var(--font-instrument)' }} role="alert">
+                  Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an robin@mieterlotse.de
+                </div>
+              )}
+              <button type="submit" className="btn-brass-solid" disabled={sending} style={{ opacity: sending ? 0.7 : 1 }}>
+                {sending ? 'Wird gesendet …' : 'Anfrage senden →'}
               </button>
             </form>
           )}

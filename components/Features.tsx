@@ -54,7 +54,7 @@ export default function Features() {
             Automatisierung ohne Kontrollverlust
           </h2>
           <p style={{ fontFamily: 'var(--font-instrument)', fontSize: 16, lineHeight: 1.8, color: 'var(--ink-600)' }}>
-            MieterPilot arbeitet im Hintergrund — sichtbar nur dann, wenn Sie es wollen. Ihr Dashboard, Ihre Regeln, Ihre Daten.
+            Mieterlotse arbeitet im Hintergrund — sichtbar nur dann, wenn Sie es wollen. Ihr Dashboard, Ihre Regeln, Ihre Daten.
           </p>
         </div>
 

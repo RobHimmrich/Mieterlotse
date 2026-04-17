@@ -22,43 +22,36 @@ export default function ImpressumPage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
 
           <div>
-            <span style={label}>Firmenname</span>
-            <p style={body}>Immobilienverwaltung Automation</p>
-          </div>
-
-          <div>
-            <h2 style={heading}>Unternehmensform</h2>
-            <p style={body}>MEI (Microempreendedor Individual – Brasilien)</p>
-            <p style={{ ...body, fontSize: 13, color: 'var(--ink-400)', marginTop: 4 }}>CNPJ: 56.930.161/0001-39</p>
-          </div>
-
-          <div>
-            <h2 style={heading}>Ansprechpartner / Verantwortlich für den Inhalt</h2>
+            <span style={label}>Name</span>
             <p style={body}>Robin Himmrich</p>
           </div>
 
           <div>
-            <h2 style={heading}>Adresse</h2>
+            <h2 style={heading}>Unternehmensbezeichnung</h2>
+            <p style={body}>Immobilienverwaltung Automation</p>
+          </div>
+
+          <div>
+            <h2 style={heading}>Anschrift</h2>
             <p style={body}>
-              Servidão Beco dos Surfistas 602<br />
-              Lagoa da Conceição<br />
-              Florianópolis – SC<br />
-              88062-620<br />
-              Brasilien
+              c/o Autorenglück #96528<br />
+              Albert-Einstein-Str. 47<br />
+              02977 Hoyerswerda<br />
+              Deutschland
             </p>
           </div>
 
           <div>
             <h2 style={heading}>E-Mail</h2>
             <p style={body}>
-              <a href="mailto:info@immobilienverwaltung-automatisieren.com" style={{ color: 'var(--brass)', textDecoration: 'none', borderBottom: '1px solid rgba(184,148,58,0.3)' }}>
-                info@immobilienverwaltung-automatisieren.com
+              <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none', borderBottom: '1px solid rgba(184,148,58,0.3)' }}>
+                info@immobilienverwaltung-automation.de
               </a>
             </p>
           </div>
 
           <div>
-            <h2 style={heading}>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+            <h2 style={heading}>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p style={body}>Robin Himmrich (Anschrift wie oben)</p>
           </div>
 
@@ -95,12 +88,7 @@ export default function ImpressumPage() {
               . Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
           </div>
-        </div>
 
-        <div style={{ marginTop: 48, padding: '20px 24px', background: 'rgba(184,148,58,0.05)', border: '1px solid rgba(184,148,58,0.12)', borderRadius: 10 }}>
-          <p style={{ fontFamily: 'var(--font-instrument)', fontSize: 13, color: 'var(--ink-400)', lineHeight: 1.7 }}>
-            <strong style={{ color: 'var(--ink-600)' }}>Hinweis:</strong> Dieses Unternehmen hat seinen Sitz in Brasilien und erbringt digitale Dienstleistungen für den deutschsprachigen Markt. Das Impressum entspricht den Anforderungen des deutschen Telemediengesetzes (TMG) für im Ausland ansässige Anbieter.
-          </p>
         </div>
       </div>
     </main>

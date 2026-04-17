@@ -5,7 +5,7 @@ export default function Footer() {
     <footer style={{ background: 'var(--obsidian)', borderTop: '1px solid var(--obsidian-border)', padding: '28px 28px' }} role="contentinfo">
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         <p style={{ fontSize: 13, color: 'var(--ink-400)', fontFamily: 'var(--font-instrument)' }}>
-          © {new Date().getFullYear()} MieterPilot. Alle Rechte vorbehalten.
+          © {new Date().getFullYear()} Mieterlotse. Alle Rechte vorbehalten.
         </p>
         <nav aria-label="Footer-Navigation">
           <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>

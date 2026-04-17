@@ -84,7 +84,7 @@ const addons = [
   { icon: <Phone size={16} />, name: 'Zusätzliche Telefonnummer', price: '49', period: '/Monat' },
   { icon: <Globe size={16} />, name: 'Mehrsprachigkeit (Voice-Agent)', price: '79', period: '/Monat' },
   { icon: <Star size={16} />, name: 'Google-Bewertungs-Automation', price: '39', period: '/Monat' },
-  { icon: <Link size={16} />, name: 'CRM-Integration', price: '199', period: '/Monat' },
+  { icon: <Link size={16} />, name: 'CRM-Integration', price: 'auf Anfrage', period: '' },
 ]
 
 type Plan = {
@@ -205,7 +205,7 @@ function PricingCard({ plan }: { plan: Plan }) {
           })}
         </div>
 
-        <a href="#contact" style={{
+        <a href="https://calendly.com/robin-himmrich/30min" target="_blank" rel="noopener noreferrer" style={{
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
           padding: '14px 0', borderRadius: 12, textDecoration: 'none',
           border: f ? 'none' : '1px solid var(--obsidian-border)',
@@ -300,7 +300,7 @@ export default function PreisePage() {
             Vergleich: Ein Mitarbeiter kostet 3.500–4.500€/Monat
           </div>
           <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, fontFamily: 'var(--font-instrument)' }}>
-            MieterPilot übernimmt 70–80% der eingehenden Anfragen automatisch. Rund um die Uhr, ohne Urlaub, Krankheit oder Einarbeitung. Ab dem ersten Tag produktiv.
+            Mieterlotse übernimmt 70–80% der eingehenden Anfragen automatisch. Rund um die Uhr, ohne Urlaub, Krankheit oder Einarbeitung. Ab dem ersten Tag produktiv.
           </div>
         </div>
       </div>
@@ -371,8 +371,8 @@ export default function PreisePage() {
                   <div style={{ fontSize: 13, fontWeight: 600, color: '#fff', fontFamily: 'var(--font-instrument)' }}>{a.name}</div>
                 </div>
                 <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                  <span style={{ fontFamily: 'var(--font-fraunces)', fontSize: 19, fontWeight: 700, color: '#fff' }}>+{a.price}€</span>
-                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-instrument)', display: 'block' }}>{a.period}</span>
+                  <span style={{ fontFamily: 'var(--font-fraunces)', fontSize: 19, fontWeight: 700, color: '#fff' }}>{a.period ? `+${a.price}€` : a.price}</span>
+                  {a.period && <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-instrument)', display: 'block' }}>{a.period}</span>}
                 </div>
               </div>
             ))}
@@ -385,7 +385,7 @@ export default function PreisePage() {
         {[
           { icon: '🔒', text: 'DSGVO-konform · EU-Server' },
           { icon: '🔄', text: '30 Tage Geld-zurück' },
-          { icon: '⚡', text: 'Einrichtung in wenigen Tagen' },
+          { icon: '⚡', text: 'Einrichtung in unter 2 Wochen' },
           { icon: '🤝', text: 'Persönliches Onboarding' },
         ].map((t, i) => (
           <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'rgba(255,255,255,0.45)', fontWeight: 500, fontFamily: 'var(--font-instrument)' }}>

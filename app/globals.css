@@ -373,23 +373,72 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 }
 .skip-link:focus { top: 8px; }
 
-/* Responsive overrides */
+/* ─── Responsive overrides ───────────────────────────── */
+
+/* Verhindert horizontales Scrollen auf allen Breiten */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
+  .db-layout { grid-template-columns: 1fr !important; gap: 48px !important; }
   .features-grid { grid-template-columns: 1fr 1fr !important; }
   .kpi-strip { grid-template-columns: 1fr 1fr !important; }
 }
+
 @media (max-width: 768px) {
+  /* Abschnitte: Innenabstand reduzieren */
+  section { padding-top: 64px !important; padding-bottom: 64px !important; }
+
+  /* Grid-Layouts einspaltig */
   .features-grid { grid-template-columns: 1fr !important; }
   .usecases-grid { grid-template-columns: 1fr !important; }
   .faq-layout { grid-template-columns: 1fr !important; }
   .contact-grid-2 { grid-template-columns: 1fr !important; }
   .kpi-strip { grid-template-columns: 1fr 1fr !important; }
+
+  /* Dashboard-Tabelle: unwichtige Spalten ausblenden */
   .dashboard-table-row > div:nth-child(n+3) { display: none; }
+
+  /* Typografie */
+  .kpi-number { font-size: clamp(32px, 8vw, 44px) !important; }
+  .referenz-quote { font-size: clamp(17px, 4.5vw, 22px) !important; }
+
+  /* Hover-Effekte deaktivieren (kein GPU-Overhead auf Mobilgeräten) */
+  .feature-card-light:hover,
+  .feature-card-dark:hover { transform: none !important; box-shadow: none !important; }
+  .btn-obsidian:hover,
+  .btn-brass-outline:hover,
+  .btn-brass-solid:hover { transform: none !important; }
 }
+
 @media (max-width: 480px) {
+  /* Hero CTA: untereinander */
   .hero-cta-row { flex-direction: column !important; }
-  .hero-cta-row > * { width: 100% !important; justify-content: center !important; }
+  .hero-cta-row > * { width: 100% !important; justify-content: center !important; text-align: center !important; }
+
+  /* KPI-Strip: 2 Spalten */
   .kpi-strip { grid-template-columns: 1fr 1fr !important; }
-  .integrations-row { flex-wrap: wrap !important; gap: 10px !important; }
+
+  /* Integrations-Logos umbrechen */
+  .integrations-row { flex-wrap: wrap !important; gap: 10px !important; justify-content: center !important; }
+
+  /* Seitlicher Innenabstand verringern */
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+  nav > div { padding-left: 16px !important; padding-right: 16px !important; }
+}
+
+/* ─── prefers-reduced-motion ─────────────────────────
+   Deaktiviert Animationen für Nutzer mit reduzierter
+   Bewegung (Barrierefreiheit + ältere Mobilgeräte)
+────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

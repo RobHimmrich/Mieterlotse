@@ -45,7 +45,7 @@ export default function Team() {
               <div style={{ padding: 3, background: 'linear-gradient(135deg, var(--brass), var(--brass-light))', borderRadius: '50%', display: 'inline-block' }}>
                 <img
                   src="/robin-himmrich.jpg"
-                  alt="Robin Himmrich, Gründer MieterPilot"
+                  alt="Robin Himmrich, Gründer Mieterlotse"
                   width={88}
                   height={88}
                   style={{ width: 88, height: 88, borderRadius: '50%', objectFit: 'cover', display: 'block' }}
@@ -54,7 +54,7 @@ export default function Team() {
             </div>
 
             <div style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 700, fontSize: 20, color: '#fff', marginBottom: 4, letterSpacing: '-0.02em' }}>Robin Himmrich</div>
-            <div style={{ fontFamily: 'var(--font-instrument)', fontSize: 13, color: 'var(--brass)', fontWeight: 600, marginBottom: 16, letterSpacing: '0.02em' }}>Gründer, MieterPilot</div>
+            <div style={{ fontFamily: 'var(--font-instrument)', fontSize: 13, color: 'var(--brass)', fontWeight: 600, marginBottom: 16, letterSpacing: '0.02em' }}>Gründer, Mieterlotse</div>
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: 13, lineHeight: 1.7, color: 'rgba(255,255,255,0.5)', marginBottom: 24 }}>
               Ihr direkter Ansprechpartner für Einrichtung, Strategie-Gespräch und laufenden Support — von Anfang an.
             </p>
@@ -65,7 +65,7 @@ export default function Team() {
               <a href="mailto:robin@immobilienverwaltung-automation.com" style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '8px 16px', background: 'var(--brass-pale)', border: '1px solid var(--brass-border)', borderRadius: 6, color: 'var(--brass)', textDecoration: 'none', fontSize: 13, fontWeight: 600, fontFamily: 'var(--font-instrument)' }} aria-label="E-Mail an Robin Himmrich">
                 <Mail size={13} aria-hidden="true" /> E-Mail
               </a>
-              <a href="#contact" style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '8px 16px', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--obsidian-border)', borderRadius: 6, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: 13, fontWeight: 600, fontFamily: 'var(--font-instrument)' }}>
+              <a href="https://calendly.com/robin-himmrich/30min" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '8px 16px', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--obsidian-border)', borderRadius: 6, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: 13, fontWeight: 600, fontFamily: 'var(--font-instrument)' }}>
                 Gespräch buchen →
               </a>
             </div>

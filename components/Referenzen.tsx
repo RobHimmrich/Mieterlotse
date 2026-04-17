@@ -6,19 +6,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const quotes = [
   {
-    text: 'Endlich kein Chaos mehr am Montagmorgen. Das Team kommt ins Büro und alles ist bereits bearbeitet.',
-    company: 'Hausverwaltung, 450 Einheiten',
-    city: 'Hamburg',
-  },
-  {
-    text: 'Das Dashboard gibt mir einen Überblick über mein gesamtes Portfolio, den ich vorher nie hatte.',
-    company: 'Inhaber, 320 Einheiten',
-    city: 'München',
-  },
-  {
-    text: 'Mein Team hat deutlich mehr Zeit für die wirklich wichtigen Aufgaben. Die Routineanfragen erledigt die KI zuverlässiger als ein Teilzeitkraft.',
-    company: 'Geschäftsführer, 680 Einheiten',
-    city: 'Frankfurt',
+    text: 'Mein Team hat deutlich mehr Zeit für die wirklich wichtigen Aufgaben. Die Routineanfragen erledigt die KI zuverlässiger als eine Teilzeitkraft und man findet alle Informationen zur Anfrage im Dashboard sauber hinterlegt.',
+    company: 'Geschäftsführer',
+    city: 'Kreis Altenkirchen',
   },
 ]
 
@@ -45,7 +35,7 @@ export default function Referenzen() {
           </h2>
         </div>
 
-        <div className="ref-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28 }}>
+        <div className="ref-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 600px)', gap: 28, justifyContent: 'center' }}>
           {quotes.map((q, i) => (
             <div key={i} className="ref-quote" style={{ background: 'var(--white)', border: '1px solid rgba(184,148,58,0.12)', borderRadius: 12, padding: '36px 32px', position: 'relative' }}>
               {/* Opening quote mark */}

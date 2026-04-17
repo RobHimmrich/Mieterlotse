@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const faqs = [
   {
     q: 'Wie läuft die Einführung ab?',
-    a: 'Wir übernehmen die komplette Einrichtung für Sie — Sie müssen nichts konfigurieren oder installieren. Nach einem kurzen Gespräch richten wir alles ein: den KI-Assistenten, die E-Mail-Integration und das Dashboard. Innerhalb von 3–5 Werktagen können Sie loslegen.',
+    a: 'Wir übernehmen die komplette Einrichtung für Sie — Sie müssen nichts konfigurieren oder installieren. Nach einem kurzen Gespräch richten wir alles ein: den KI-Assistenten, die E-Mail-Integration und das Dashboard. In unter 2 Wochen sind Sie einsatzbereit.',
   },
   {
     q: 'Sind meine Daten DSGVO-konform geschützt?',
@@ -16,15 +16,15 @@ const faqs = [
   },
   {
     q: 'Wie lange dauert die Umstellung?',
-    a: 'Die Einrichtung dauert in der Regel 3–5 Werktage. Es ist keine Migration bestehender Daten nötig — wir arbeiten mit Ihren vorhandenen Kommunikationskanälen: Ihrer Telefonnummer und Ihrer E-Mail-Adresse. Kein neues System, keine Schulungen für Ihr Team.',
+    a: 'Die Einrichtung dauert in der Regel unter 2 Wochen. Es ist keine Migration bestehender Daten nötig — wir arbeiten mit Ihren vorhandenen Kommunikationskanälen: Ihrer Telefonnummer und Ihrer E-Mail-Adresse. Kein neues System, keine Schulungen für Ihr Team.',
   },
   {
     q: 'Welche Systeme können integriert werden?',
-    a: 'MieterPilot arbeitet direkt über Ihre bestehende Telefonnummer und Ihr E-Mail-Postfach. Die Integration in gängige Hausverwaltungssoftware ist auf Anfrage möglich. Sie brauchen weder neue Software noch neue Hardware.',
+    a: 'Mieterlotse arbeitet direkt über Ihre bestehende Telefonnummer und Ihr E-Mail-Postfach. Die Integration in gängige Hausverwaltungssoftware ist auf Anfrage möglich. Sie brauchen weder neue Software noch neue Hardware.',
   },
   {
     q: 'Wie entlastet die Automatisierung mein Team?',
-    a: 'Die häufigsten Mieteranfragen — Nebenkostenfragen, Reparaturmeldungen, Mietbescheinigungen — werden vollautomatisch beantwortet. Ihr Team erhält nur dann eine Benachrichtigung, wenn ein Fall wirklich dringend ist. So sparen Sie bis zu 12 Stunden pro Woche und können sich auf wichtigere Aufgaben konzentrieren.',
+    a: 'Die häufigsten Mieteranfragen — Nebenkostenfragen, Reparaturmeldungen, Mietbescheinigungen — werden vollautomatisch beantwortet. Ihr Team wird nur eingeschaltet, wenn ein Fall nicht vom KI-Agenten übernommen werden kann — aber egal welcher Fall es ist: Alles wird sauber im Dashboard hinterlegt. So sparen Sie bis zu 16 Stunden pro Woche und können sich auf wichtigere Aufgaben konzentrieren.',
   },
 ]
 
@@ -55,8 +55,8 @@ export default function FAQ() {
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: 14, lineHeight: 1.8, color: 'var(--ink-600)', marginBottom: 28 }}>
               Offene Fragen? Wir besprechen alles direkt — ohne Sales-Team, ohne Umwege.
             </p>
-            <a href="#contact" style={{ fontFamily: 'var(--font-instrument)', fontWeight: 600, fontSize: 14, color: 'var(--brass)', textDecoration: 'none', borderBottom: '1px solid rgba(184,148,58,0.35)', paddingBottom: 2 }}>
-              Frage stellen →
+            <a href="https://calendly.com/robin-himmrich/30min" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-instrument)', fontWeight: 600, fontSize: 14, color: 'var(--brass)', textDecoration: 'none', borderBottom: '1px solid rgba(184,148,58,0.35)', paddingBottom: 2 }}>
+              Erstgespräch buchen →
             </a>
           </div>
 
