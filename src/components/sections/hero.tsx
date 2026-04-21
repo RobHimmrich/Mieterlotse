@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden pb-20 pt-36 md:pb-28 md:pt-44"
+      className="relative overflow-hidden pb-16 pt-28 md:pb-28 md:pt-44"
     >
       <div className="ml-hero-blob" aria-hidden />
 

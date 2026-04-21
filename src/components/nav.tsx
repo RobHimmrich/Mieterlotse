@@ -1,9 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { CtaButton } from "@/components/ui/cta-button";
 import { Logo } from "@/components/ui/logo";
-import { cn } from "@/lib/cn";
 
 const LINKS = [
   { label: "So funktioniert's", href: "/#how" },
@@ -12,26 +10,15 @@ const LINKS = [
 ];
 
 export function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-white/95 backdrop-blur border-b border-[var(--ml-line)]"
-          : "bg-transparent",
-      )}
-    >
-      <div className="ml-container flex h-16 items-center justify-between">
-        <a href="/" className="flex items-center" aria-label="Mieterlotse — Startseite">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--ml-line)] bg-white/95 backdrop-blur">
+
+      <div className="ml-container flex h-16 items-center justify-between gap-3">
+        <a
+          href="/"
+          className="flex flex-shrink-0 items-center"
+          aria-label="Mieterlotse — Startseite"
+        >
           <Logo size={22} />
         </a>
 
@@ -47,13 +34,14 @@ export function Nav() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-shrink-0 items-center gap-3">
           <CtaButton
             href="https://calendly.com/robin-himmrich/30min"
             variant="primary"
-            className="h-10 px-5 text-[14px]"
+            className="h-9 px-3.5 text-[13px] sm:h-10 sm:px-5 sm:text-[14px]"
           >
-            Erstgespräch buchen
+            <span className="sm:hidden">Termin</span>
+            <span className="hidden sm:inline">Erstgespräch buchen</span>
           </CtaButton>
         </div>
       </div>
