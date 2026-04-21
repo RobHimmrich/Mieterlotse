@@ -1,113 +1,52 @@
-import type { Metadata } from 'next'
-import { Fraunces, Instrument_Sans } from 'next/font/google'
-import './globals.css'
-import CookieBanner from '@/components/CookieBanner'
+import type { Metadata } from "next";
+import { Inter, Caveat } from "next/font/google";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
+import { ScrollRevealRoot } from "@/components/ui/scroll-reveal";
+import { CookieBanner } from "@/components/ui/cookie-banner";
+import "./globals.css";
 
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '900'],
-  style: ['normal', 'italic'],
-  variable: '--font-fraunces',
-  display: 'swap',
-})
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
-const instrumentSans = Instrument_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-instrument',
-  display: 'swap',
-})
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-handwriting",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'Mieterlotse — Betriebssteuerung für mittelständische Hausverwaltungen',
+  title: "Mieterlotse — Ihr Unternehmen läuft, auch wenn Sie nicht im Büro sind.",
   description:
-    'Vollständige Betriebsübersicht für Geschäftsführer: KI-gestützte Mieterkommunikation, proprietäres Dashboard und 12+ Stunden Ersparnis pro Woche. DSGVO-konform, kein Systemwechsel.',
-  metadataBase: new URL('https://immobilienverwaltung-automation.com'),
-  alternates: { canonical: '/' },
+    "Mieterlotse beantwortet 70 % Ihrer Mieteranfragen automatisch — auf Ihrer bestehenden Telefonnummer und Ihrer bestehenden E-Mail-Adresse. Keine neue Software, keine Schulungen.",
+  metadataBase: new URL("https://mieterlotse.de"),
   openGraph: {
-    title: 'Mieterlotse — Betriebssteuerung für Hausverwaltungen',
+    type: "website",
+    locale: "de_DE",
+    title: "Mieterlotse — Betriebssteuerung für Hausverwaltungen",
     description:
-      'KI-Mieterkommunikation mit eigenem Dashboard. Volle Kontrolle, keine neue Software. Für Geschäftsführer mittelständischer Hausverwaltungen.',
-    url: 'https://immobilienverwaltung-automation.com',
-    siteName: 'Mieterlotse',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Mieterlotse Dashboard' }],
-    locale: 'de_DE',
-    type: 'website',
+      "70 % Ihrer Mieteranfragen automatisch beantwortet. Kein neues System.",
   },
-  robots: { index: true, follow: true },
-}
+};
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Wie behalte ich als Geschäftsführer die Kontrolle?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sie erhalten Zugang zu Ihrem eigenen proprietären Dashboard, das alle Vorgänge, Anrufe und Eskaliationen in Echtzeit anzeigt. Sie entscheiden, welche Fälle an Sie weitergeleitet werden — alle anderen werden automatisch bearbeitet.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Können meine bestehenden Systeme angebunden werden?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ja. Mieterlotse ist kompatibel mit gängigen Hausverwaltungssystemen wie DOMUS, Haufe und iX-Haus. Sie müssen keine bestehende Software ersetzen oder Ihr Team umschulen.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Was passiert, wenn die KI einen Fehler macht?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Das System ist so konfiguriert, dass es im Zweifelsfall an Sie eskaliert, anstatt eine unzuverlässige Antwort zu geben. Sie legen die Grenzen fest — Ihr Dashboard zeigt jede Interaktion transparent nach.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Wie sind meine Daten geschützt?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Alle Daten werden ausschließlich auf europäischen Servern gespeichert. Das Dashboard ist Ihr proprietäres System — kein Drittanbieter hat Zugriff. AVV nach Art. 28 DSGVO ist standardmäßig inklusive.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Wie skaliert Mieterlotse mit meinem Portfolio?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Das System skaliert linear mit Ihrem Portfolio. Wachsen Sie von 300 auf 600 Einheiten, verdoppelt sich die Kapazität automatisch — ohne neue Mitarbeiter einstellen zu müssen. Das Dashboard passt sich entsprechend an.',
-      },
-    },
-  ],
-}
-
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'Mieterlotse',
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Web',
-  url: 'https://immobilienverwaltung-automation.com',
-  description: 'KI-gestützte Mieterkommunikation mit proprietärem Dashboard für mittelständische Hausverwaltungen.',
-  offers: { '@type': 'Offer', priceCurrency: 'EUR' },
-  creator: { '@type': 'Person', name: 'Robin Himmrich' },
-}
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="de" className={`${fraunces.variable} ${instrumentSans.variable}`}>
-      <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      </head>
+    <html lang="de" className={`${inter.variable} ${caveat.variable}`}>
       <body>
-        <a href="#main-content" className="skip-link">Zum Hauptinhalt springen</a>
-        {children}
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+        <ScrollRevealRoot />
         <CookieBanner />
       </body>
     </html>
-  )
+  );
 }

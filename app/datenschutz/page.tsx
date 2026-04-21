@@ -1,194 +1,322 @@
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import type { Metadata } from "next";
+import { Eyebrow } from "@/components/ui/eyebrow";
+
+export const metadata: Metadata = {
+  title: "Datenschutzerklärung — Mieterlotse",
+  description:
+    "Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO, BDSG und TMG.",
+};
 
 export default function DatenschutzPage() {
-  const h2: React.CSSProperties = { fontFamily: 'var(--font-fraunces)', fontWeight: 700, fontSize: 20, color: 'var(--ink-900)', marginBottom: 12, marginTop: 44, letterSpacing: '-0.02em', lineHeight: 1.2 }
-  const h3: React.CSSProperties = { fontFamily: 'var(--font-instrument)', fontWeight: 700, fontSize: 15, color: 'var(--ink-900)', marginBottom: 8, marginTop: 24 }
-  const p: React.CSSProperties = { fontFamily: 'var(--font-instrument)', fontSize: 15, color: 'var(--ink-600)', lineHeight: 1.8, marginBottom: 14 }
-  const ul: React.CSSProperties = { fontFamily: 'var(--font-instrument)', fontSize: 15, color: 'var(--ink-600)', lineHeight: 1.8, paddingLeft: 24, marginBottom: 14 }
-  const divider: React.CSSProperties = { height: 1, background: 'rgba(184,148,58,0.12)', margin: '32px 0' }
-  const infoBox: React.CSSProperties = { background: 'rgba(184,148,58,0.05)', border: '1px solid rgba(184,148,58,0.12)', borderRadius: 10, padding: '20px 24px', marginBottom: 24 }
-
   return (
-    <>
-    <Navbar />
-    <main style={{ background: 'var(--bg-base)', minHeight: '100vh', padding: '96px 28px 80px' }}>
-      <div style={{ maxWidth: 720, margin: '0 auto' }}>
-        <span style={{ fontFamily: 'var(--font-instrument)', fontSize: 12, fontWeight: 700, color: 'var(--brass)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: 16 }}>RECHTLICHES</span>
-        <h1 style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 900, fontSize: 'clamp(30px, 4vw, 42px)', color: 'var(--ink-900)', letterSpacing: '-0.025em', lineHeight: 1.15, marginBottom: 8 }}>
-          Datenschutzerklärung
-        </h1>
-        <p style={{ ...p, color: 'var(--ink-400)', marginBottom: 40 }}>Stand: März 2026 · Gemäß DSGVO, BDSG und TMG</p>
+    <section className="ml-section pt-36 md:pt-44">
+      <div className="ml-container">
+        <div className="mx-auto max-w-[720px]">
+          <div className="ml-reveal">
+            <Eyebrow>Rechtliches</Eyebrow>
+            <h1 className="ml-h1 mt-4">Datenschutzerklärung</h1>
+            <p className="ml-whisper mt-4 font-mono">
+              Stand: März 2026 · Gemäß DSGVO, BDSG und TMG
+            </p>
+          </div>
 
-        <div style={divider} />
+          <div className="ml-reveal mt-12 rounded border border-[var(--ml-line)] bg-white p-6 md:p-8">
+            <div className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-[var(--ml-ink-whisper)]">
+              Verantwortlicher im Sinne der DSGVO
+            </div>
+            <address className="mt-3 not-italic text-[15px] leading-relaxed text-[var(--ml-ink)]">
+              Immobilienverwaltung Automation · Robin Himmrich
+              <br />
+              c/o Autorenglück #96528
+              <br />
+              Albert-Einstein-Str. 47
+              <br />
+              02977 Hoyerswerda
+              <br />
+              Deutschland
+              <br />
+              E-Mail:{" "}
+              <a
+                href="mailto:info@immobilienverwaltung-automation.de"
+                className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
+              >
+                info@immobilienverwaltung-automation.de
+              </a>
+            </address>
+          </div>
 
-        {/* Verantwortlicher */}
-        <div style={infoBox}>
-          <p style={{ ...p, marginBottom: 4, fontWeight: 600, color: 'var(--ink-900)' }}>Verantwortlicher im Sinne der DSGVO</p>
-          <p style={{ ...p, marginBottom: 0, fontSize: 14 }}>
-            Immobilienverwaltung Automation · Robin Himmrich<br />
-            c/o Autorenglück #96528<br />
-            Albert-Einstein-Str. 47<br />
-            02977 Hoyerswerda<br />
-            Deutschland<br />
-            E-Mail:{' '}
-            <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-              info@immobilienverwaltung-automation.de
-            </a>
-          </p>
-        </div>
+          <div className="ml-reveal mt-16 flex flex-col gap-14">
+            <Block n={1} title="Allgemeine Hinweise">
+              <p>
+                Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Diese
+                Datenschutzerklärung informiert Sie darüber, wie wir
+                personenbezogene Daten im Rahmen des Betriebs dieser Website und
+                unserer Dienstleistungen erheben, verarbeiten und schützen. Es
+                gelten die Vorschriften der Datenschutz-Grundverordnung (DSGVO),
+                des Bundesdatenschutzgesetzes (BDSG) sowie des
+                Telemediengesetzes (TMG).
+              </p>
+            </Block>
 
-        {/* 1 */}
-        <h2 style={h2}>1. Allgemeine Hinweise</h2>
-        <p style={p}>
-          Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Diese Datenschutzerklärung informiert Sie darüber, wie wir personenbezogene Daten im Rahmen des Betriebs dieser Website und unserer Dienstleistungen erheben, verarbeiten und schützen. Es gelten die Vorschriften der Datenschutz-Grundverordnung (DSGVO), des Bundesdatenschutzgesetzes (BDSG) sowie des Telemediengesetzes (TMG).
-        </p>
+            <Block n={2} title="Datenerhebung auf dieser Website">
+              <SubTitle>Hosting &amp; Server-Logs</SubTitle>
+              <p>
+                Diese Website wird bei Vercel Inc. gehostet. Beim Aufruf der
+                Website werden automatisch Informationen in sogenannten
+                Server-Log-Dateien gespeichert, die Ihr Browser übermittelt:
+              </p>
+              <ul className="flex flex-col gap-2 pl-5 list-disc marker:text-[var(--ml-cta)] mt-4">
+                <li>Browsertyp und Browserversion</li>
+                <li>Verwendetes Betriebssystem</li>
+                <li>Referrer URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>Uhrzeit der Serveranfrage</li>
+                <li>IP-Adresse (anonymisiert)</li>
+              </ul>
+              <p className="mt-4">
+                Diese Daten werden nicht mit anderen Datenquellen
+                zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO
+                (berechtigtes Interesse am sicheren Betrieb der Website). Die
+                Daten werden nach 30 Tagen automatisch gelöscht.
+              </p>
 
-        <div style={divider} />
+              <SubTitle className="mt-8">Cookies</SubTitle>
+              <p>
+                Diese Website setzt ausschließlich technisch notwendige Cookies
+                ein, die für den Betrieb der Website erforderlich sind. Es
+                werden keine Tracking-Cookies oder Werbe-Cookies verwendet. Eine
+                Einwilligung ist für technisch notwendige Cookies gemäß § 25
+                Abs. 2 TTDSG nicht erforderlich.
+              </p>
+            </Block>
 
-        {/* 2 */}
-        <h2 style={h2}>2. Datenerhebung auf dieser Website</h2>
+            <Block n={3} title="Kontaktformular & E-Mail-Kontakt">
+              <p>
+                Wenn Sie uns über das Kontaktformular oder per E-Mail
+                kontaktieren, werden die von Ihnen angegebenen Daten (Name,
+                E-Mail-Adresse, Telefonnummer, Unternehmensgröße, Nachricht) zur
+                Bearbeitung Ihrer Anfrage und für den Fall von Anschlussfragen
+                gespeichert.
+              </p>
+              <DefinitionList
+                items={[
+                  {
+                    term: "Erhobene Daten",
+                    def: "Vorname, Nachname, E-Mail-Adresse, Telefonnummer (optional), Anzahl verwalteter Einheiten, aktuelle Verwaltungssoftware (optional), Nachricht.",
+                  },
+                  {
+                    term: "Zweck",
+                    def: "Bearbeitung Ihrer Anfrage, Vorbereitung des Erstgesprächs, Kontaktaufnahme durch unsere Seite.",
+                  },
+                  {
+                    term: "Rechtsgrundlage",
+                    def: "Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) sowie Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen).",
+                  },
+                  {
+                    term: "Speicherdauer",
+                    def: "spätestens nach 2 Jahren.",
+                  },
+                ]}
+              />
+              <p className="mt-4">
+                Widerruf per E-Mail an:{" "}
+                <a
+                  href="mailto:info@immobilienverwaltung-automation.de"
+                  className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
+                >
+                  info@immobilienverwaltung-automation.de
+                </a>
+              </p>
+            </Block>
 
-        <h3 style={h3}>Hosting & Server-Logs</h3>
-        <p style={p}>
-          Diese Website wird bei Vercel Inc. gehostet. Beim Aufruf der Website werden automatisch Informationen in sogenannten Server-Log-Dateien gespeichert, die Ihr Browser übermittelt:
-        </p>
-        <ul style={ul}>
-          <li>Browsertyp und Browserversion</li>
-          <li>Verwendetes Betriebssystem</li>
-          <li>Referrer URL</li>
-          <li>Hostname des zugreifenden Rechners</li>
-          <li>Uhrzeit der Serveranfrage</li>
-          <li>IP-Adresse (anonymisiert)</li>
-        </ul>
-        <p style={p}>
-          Diese Daten werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website). Die Daten werden nach 30 Tagen automatisch gelöscht.
-        </p>
+            <Block n={4} title="Nutzung unserer Dienstleistungen">
+              <p>
+                Im Rahmen der Nutzung von Mieterlotse verarbeiten wir
+                personenbezogene Daten Ihrer Mieter im Auftrag der jeweiligen
+                Hausverwaltung (Art. 28 DSGVO — Auftragsverarbeitung). Dazu
+                zählen insbesondere eingehende Anrufe, E-Mails und die daraus
+                generierten Ticket-, Kategorisierungs- und Audit-Daten.
+              </p>
+              <DefinitionList
+                className="mt-4"
+                items={[
+                  {
+                    term: "Erhobene Daten",
+                    def: "Name, Adresse, Telefonnummer, E-Mail-Adresse der Mieter, Objekt- und Einheitenzuordnung, Gesprächs- und Nachrichteninhalte, Audio-Transkripte, Zeitstempel, Kategorisierungsdaten.",
+                  },
+                  {
+                    term: "Zweck",
+                    def: "Automatisierte Entgegennahme, Kategorisierung und Weiterleitung von Mieteranfragen; lückenlose Dokumentation für die Hausverwaltung.",
+                  },
+                  {
+                    term: "Rechtsgrundlage",
+                    def: "Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung gegenüber der Hausverwaltung) sowie Art. 28 DSGVO (Auftragsverarbeitung).",
+                  },
+                  {
+                    term: "Speicherdauer",
+                    def: "Gespräche und Tickets werden bis zu 7 Jahre revisionssicher archiviert, sofern nicht gesetzliche Aufbewahrungsfristen abweichen. Löschung nach Auftragsende oder auf Weisung des Verantwortlichen.",
+                  },
+                ]}
+              />
+              <p className="mt-4">
+                Mieterdaten werden ausschließlich zur Vertragserfüllung
+                verarbeitet und{" "}
+                <strong className="font-semibold text-[var(--ml-ink)]">
+                  nicht für das Training von KI-Modellen
+                </strong>{" "}
+                verwendet.
+              </p>
+            </Block>
 
-        <h3 style={h3}>Cookies</h3>
-        <p style={p}>
-          Diese Website setzt ausschließlich technisch notwendige Cookies ein, die für den Betrieb der Website erforderlich sind. Es werden keine Tracking-Cookies oder Werbe-Cookies verwendet. Eine Einwilligung ist für technisch notwendige Cookies gemäß § 25 Abs. 2 TTDSG nicht erforderlich.
-        </p>
+            <Block n={5} title="Auftragsverarbeiter & Subunternehmer">
+              <p>
+                Zum Betrieb der Plattform setzen wir sorgfältig ausgewählte
+                Dienstleister innerhalb der EU ein. Mit jedem
+                Auftragsverarbeiter besteht ein Vertrag nach Art. 28 DSGVO.
+                Server und Datenhaltung liegen innerhalb der EU; eine
+                Datenübermittlung in Drittländer findet grundsätzlich nicht
+                statt.
+              </p>
+              <ul className="flex flex-col gap-2 pl-5 list-disc marker:text-[var(--ml-cta)] mt-4">
+                <li>Hosting &amp; Infrastruktur: Vercel Inc. (EU-Region)</li>
+                <li>Telefonie-Infrastruktur: EU-Anbieter</li>
+                <li>
+                  Sprach- und Textverarbeitung: EU-basierte KI-Infrastruktur,
+                  kein Modelltraining mit Kundendaten
+                </li>
+              </ul>
+              <p className="mt-4">
+                Eine aktuelle Liste der eingesetzten Subunternehmer stellen wir
+                Auftraggebern auf Anfrage zur Verfügung.
+              </p>
+            </Block>
 
-        <div style={divider} />
+            <Block n={6} title="Ihre Rechte als betroffene Person">
+              <p>Sie haben jederzeit das Recht auf:</p>
+              <ul className="flex flex-col gap-2 pl-5 list-disc marker:text-[var(--ml-cta)] mt-4">
+                <li>Auskunft über die gespeicherten Daten (Art. 15 DSGVO)</li>
+                <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+                <li>
+                  Löschung Ihrer Daten, soweit gesetzlich zulässig (Art. 17
+                  DSGVO)
+                </li>
+                <li>
+                  Einschränkung der Verarbeitung (Art. 18 DSGVO)
+                </li>
+                <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+                <li>
+                  Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)
+                </li>
+                <li>
+                  Widerruf einer erteilten Einwilligung mit Wirkung für die
+                  Zukunft (Art. 7 Abs. 3 DSGVO)
+                </li>
+                <li>
+                  Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77
+                  DSGVO)
+                </li>
+              </ul>
+              <p className="mt-4">
+                Zur Ausübung Ihrer Rechte wenden Sie sich an:{" "}
+                <a
+                  href="mailto:info@immobilienverwaltung-automation.de"
+                  className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
+                >
+                  info@immobilienverwaltung-automation.de
+                </a>
+              </p>
+            </Block>
 
-        {/* 3 */}
-        <h2 style={h2}>3. Kontaktformular & E-Mail-Kontakt</h2>
-        <p style={p}>
-          Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren, werden die von Ihnen angegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Unternehmensgröße, Nachricht) zur Bearbeitung Ihrer Anfrage und für den Fall von Anschlussfragen gespeichert.
-        </p>
-        <p style={p}>
-          <strong>Erhobene Daten:</strong> Vorname, Nachname, E-Mail-Adresse, Telefonnummer (optional), Anzahl verwalteter Einheiten, aktuelle Verwaltungssoftware (optional), Nachricht.
-        </p>
-        <p style={p}>
-          <strong>Zweck:</strong> Bearbeitung Ihrer Anfrage, Vorbereitung des Erstgesprächs, Kontaktaufnahme durch unsere Seite.
-        </p>
-        <p style={p}>
-          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) sowie Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen). Sie haben der Verarbeitung Ihrer Daten durch Ankreuzen der Datenschutz-Checkbox ausdrücklich zugestimmt.
-        </p>
-        <p style={p}>
-          <strong>Speicherdauer:</strong> Ihre Daten werden gelöscht, sobald Ihre Anfrage abschließend bearbeitet wurde und keine gesetzlichen Aufbewahrungspflichten entgegenstehen, spätestens nach 2 Jahren.
-        </p>
-        <p style={p}>
-          Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie uns eine E-Mail an{' '}
-          <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-            info@immobilienverwaltung-automation.de
-          </a>{' '}
-          senden.
-        </p>
+            <Block n={7} title="Datensicherheit">
+              <p>
+                Wir treffen geeignete technische und organisatorische Maßnahmen
+                (TOMs) gemäß Art. 32 DSGVO, um Ihre Daten gegen unbefugten
+                Zugriff, Verlust oder Manipulation zu schützen. Dazu gehören
+                u. a. verschlüsselte Verbindungen (TLS), Zugriffskontrollen,
+                Protokollierung und regelmäßige Sicherheits-Reviews. Die
+                vollständigen TOMs sind auf Anfrage einsehbar.
+              </p>
+            </Block>
 
-        <div style={divider} />
-
-        {/* 4 */}
-        <h2 style={h2}>4. Nutzung unserer Dienstleistungen (Dashboard & KI-System)</h2>
-        <p style={p}>
-          Im Rahmen der Nutzung von Mieterlotse verarbeiten wir personenbezogene Daten Ihrer Mieter und Verwaltungsvorgänge. Für diese Verarbeitung schließen wir mit Ihnen als Auftraggeber einen <strong>Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO</strong>, der Gegenstand eines separaten Vertragsdokuments ist.
-        </p>
-        <p style={p}>
-          <strong>Verarbeitete Datenkategorien:</strong> Namen und Kontaktdaten von Mietern, Kommunikationsinhalte (Anrufe, E-Mails), Vorgangsdaten, Zeitstempel und Protokolle.
-        </p>
-        <p style={p}>
-          <strong>Speicherort:</strong> Alle Daten werden ausschließlich auf Servern innerhalb der Europäischen Union gespeichert und verarbeitet. Ein Transfer in Drittländer findet nicht statt.
-        </p>
-        <p style={p}>
-          <strong>Speicherdauer:</strong> Gemäß den Vereinbarungen im AVV und den gesetzlichen Aufbewahrungspflichten. Nach Vertragsende werden alle Daten innerhalb von 30 Tagen gelöscht oder auf Wunsch übergeben.
-        </p>
-
-        <div style={divider} />
-
-        {/* 5 */}
-        <h2 style={h2}>5. Weitergabe von Daten an Dritte</h2>
-        <p style={p}>
-          Wir geben Ihre personenbezogenen Daten nicht ohne Ihre ausdrückliche Einwilligung an Dritte weiter, außer:
-        </p>
-        <ul style={ul}>
-          <li>wenn dies zur Erfüllung eines Vertrages notwendig ist (Art. 6 Abs. 1 lit. b DSGVO)</li>
-          <li>wenn wir gesetzlich dazu verpflichtet sind (Art. 6 Abs. 1 lit. c DSGVO)</li>
-          <li>an Auftragsverarbeiter, die wir sorgfältig ausgewählt haben und mit denen wir AVVs abgeschlossen haben</li>
-        </ul>
-        <p style={p}>
-          <strong>Eingesetzte Auftragsverarbeiter (Auszug):</strong> Vercel Inc. (Hosting, EU-Infrastruktur). Vercel verarbeitet Daten auf Basis von Standardvertragsklauseln gemäß Art. 46 DSGVO.
-        </p>
-
-        <div style={divider} />
-
-        {/* 6 */}
-        <h2 style={h2}>6. Ihre Rechte als betroffene Person</h2>
-        <p style={p}>Sie haben nach der DSGVO folgende Rechte gegenüber uns bezüglich Ihrer personenbezogenen Daten:</p>
-        <ul style={ul}>
-          <li><strong>Auskunftsrecht (Art. 15 DSGVO)</strong> – Sie haben das Recht, Auskunft über die von uns gespeicherten Daten zu erhalten.</li>
-          <li><strong>Berichtigungsrecht (Art. 16 DSGVO)</strong> – Sie können die Berichtigung unrichtiger Daten verlangen.</li>
-          <li><strong>Löschungsrecht (Art. 17 DSGVO)</strong> – Sie können die Löschung Ihrer Daten verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
-          <li><strong>Einschränkung der Verarbeitung (Art. 18 DSGVO)</strong> – Sie können die Einschränkung der Verarbeitung Ihrer Daten verlangen.</li>
-          <li><strong>Datenübertragbarkeit (Art. 20 DSGVO)</strong> – Sie haben das Recht, Ihre Daten in einem strukturierten Format zu erhalten.</li>
-          <li><strong>Widerspruchsrecht (Art. 21 DSGVO)</strong> – Sie können der Verarbeitung Ihrer Daten widersprechen, soweit diese auf berechtigten Interessen beruht.</li>
-          <li><strong>Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)</strong> – Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.</li>
-        </ul>
-        <p style={p}>
-          Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:{' '}
-          <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-            info@immobilienverwaltung-automation.de
-          </a>
-        </p>
-
-        <div style={divider} />
-
-        {/* 7 */}
-        <h2 style={h2}>7. Beschwerderecht bei der Aufsichtsbehörde</h2>
-        <p style={p}>
-          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Die zuständige Aufsichtsbehörde für in Deutschland ansässige Nutzer ist der jeweilige Landesdatenschutzbeauftragte. Eine Liste aller deutschen Datenschutzbehörden finden Sie unter:{' '}
-          <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-            www.bfdi.bund.de
-          </a>
-        </p>
-
-        <div style={divider} />
-
-        {/* 8 */}
-        <h2 style={h2}>8. Datensicherheit</h2>
-        <p style={p}>
-          Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten gegen zufällige oder vorsätzliche Manipulationen, Verlust, Zerstörung oder gegen den Zugriff unberechtigter Personen zu schützen. Unsere Sicherheitsmaßnahmen werden entsprechend der technologischen Entwicklung fortlaufend verbessert. Die Übertragung erfolgt verschlüsselt über HTTPS (TLS).
-        </p>
-
-        <div style={divider} />
-
-        {/* 9 */}
-        <h2 style={h2}>9. Aktualität und Änderung dieser Datenschutzerklärung</h2>
-        <p style={p}>
-          Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026. Durch die Weiterentwicklung unserer Website und unserer Angebote oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf dieser Seite abgerufen werden.
-        </p>
-
-        <div style={{ marginTop: 48, padding: '20px 24px', background: 'rgba(184,148,58,0.05)', border: '1px solid rgba(184,148,58,0.12)', borderRadius: 10 }}>
-          <p style={{ ...p, marginBottom: 0, fontSize: 13, color: 'var(--ink-400)' }}>
-            Bei Fragen zum Datenschutz stehen wir Ihnen jederzeit zur Verfügung:<br />
-            <a href="mailto:info@immobilienverwaltung-automation.de" style={{ color: 'var(--brass)', textDecoration: 'none' }}>
-              info@immobilienverwaltung-automation.de
-            </a>
-          </p>
+            <Block n={8} title="Aktualität & Änderungen">
+              <p>
+                Wir passen diese Datenschutzerklärung an, sobald Änderungen an
+                der Datenverarbeitung dies erforderlich machen. Die jeweils
+                aktuelle Version ist auf dieser Seite verfügbar.
+              </p>
+            </Block>
+          </div>
         </div>
       </div>
-    </main>
-    <Footer />
-    </>
-  )
+    </section>
+  );
+}
+
+function Block({
+  n,
+  title,
+  children,
+}: {
+  n: number;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <div className="flex items-baseline gap-3">
+        <span className="font-mono text-[13px] font-semibold text-[var(--ml-cta)]">
+          {String(n).padStart(2, "0")}
+        </span>
+        <h2 className="ml-h3 text-[20px] md:text-[22px]">{title}</h2>
+      </div>
+      <div className="ml-body mt-4 text-[15.5px]">{children}</div>
+    </div>
+  );
+}
+
+function SubTitle({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <h3
+      className={
+        "text-[15px] font-semibold text-[var(--ml-ink)] " + className
+      }
+    >
+      {children}
+    </h3>
+  );
+}
+
+function DefinitionList({
+  items,
+  className = "",
+}: {
+  items: { term: string; def: string }[];
+  className?: string;
+}) {
+  return (
+    <dl
+      className={
+        "mt-2 divide-y divide-[var(--ml-line)] rounded border border-[var(--ml-line)] bg-[var(--ml-bg-soft)] " +
+        className
+      }
+    >
+      {items.map((item) => (
+        <div
+          key={item.term}
+          className="grid gap-1 px-5 py-4 md:grid-cols-[180px_1fr] md:gap-6"
+        >
+          <dt className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-[var(--ml-ink-whisper)]">
+            {item.term}
+          </dt>
+          <dd className="text-[14.5px] text-[var(--ml-ink)]">{item.def}</dd>
+        </div>
+      ))}
+    </dl>
+  );
 }

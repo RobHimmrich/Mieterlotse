@@ -1,37 +1,29 @@
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
-import KennzahlenStrip from '@/components/KennzahlenStrip'
-import Features from '@/components/Features'
-import DashboardSection from '@/components/DashboardSection'
-import ROIKalkulator from '@/components/ROIKalkulator'
-import UseCases from '@/components/UseCases'
-import Referenzen from '@/components/Referenzen'
-import IntegrationsRow from '@/components/IntegrationsRow'
-import FAQ from '@/components/FAQ'
-import Team from '@/components/Team'
-import LiveDemoTeaser from '@/components/LiveDemoTeaser'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
+import { Hero } from "@/components/sections/hero";
+import { StatBar } from "@/components/sections/stat-bar";
+import { Problem } from "@/components/sections/problem";
+import { HowItWorks } from "@/components/sections/how-it-works";
+import { TrustBridge } from "@/components/sections/trust-bridge";
+import { Integration } from "@/components/sections/integration";
+import { RoiCalculator } from "@/components/sections/roi-calculator";
+import { Compliance } from "@/components/sections/compliance";
+import { FounderTestimonial } from "@/components/sections/founder-testimonial";
+import { Faq } from "@/components/sections/faq";
+import { FinalCta } from "@/components/sections/final-cta";
 
-export default function HomePage() {
+export default function Page() {
   return (
     <>
-      <Navbar />
-      <main id="main-content">
-        <Hero />
-        <KennzahlenStrip />
-        <Features />
-        <DashboardSection />
-        <ROIKalkulator />
-        <UseCases />
-        <Referenzen />
-        <IntegrationsRow />
-        <FAQ />
-        <Team />
-        <LiveDemoTeaser />
-        <Contact />
-      </main>
-      <Footer />
+      <Hero />
+      <StatBar />
+      <Problem />
+      <HowItWorks />
+      <TrustBridge />
+      <Integration />
+      <RoiCalculator />
+      <Compliance />
+      <FounderTestimonial />
+      <Faq />
+      <FinalCta />
     </>
-  )
+  );
 }
