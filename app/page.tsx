@@ -2,7 +2,6 @@ import { Hero } from "@/components/sections/hero";
 import { StatBar } from "@/components/sections/stat-bar";
 import { Problem } from "@/components/sections/problem";
 import { HowItWorks } from "@/components/sections/how-it-works";
-import { TrustBridge } from "@/components/sections/trust-bridge";
 import { Integration } from "@/components/sections/integration";
 import { RoiCalculator } from "@/components/sections/roi-calculator";
 import { Compliance } from "@/components/sections/compliance";
@@ -17,7 +16,6 @@ export default function Page() {
       <StatBar />
       <Problem />
       <HowItWorks />
-      <TrustBridge />
       <Integration />
       <RoiCalculator />
       <Compliance />

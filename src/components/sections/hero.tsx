@@ -5,7 +5,7 @@ import { EmailTestInline } from "@/components/ui/email-test-inline";
 import { LiveCallWidget } from "@/components/graphics/live-call-widget";
 
 const TRUST_ITEMS = [
-  "16 Std./Woche pro Sachbearbeiter zurück",
+  "16 Std./Woche zurück",
   "Plug and Play: Sofort einsetzbar",
 ];
 
@@ -20,12 +20,7 @@ export function Hero() {
       <div className="ml-container relative">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.75fr)] lg:gap-16">
           <div className="ml-reveal">
-            <div className="ml-hero-ghost" aria-hidden>
-              <span className="ml-hero-ghost-cap">KI</span>
-              <span> Hausverwaltung</span>
-            </div>
-
-            <h1 className="ml-h1 mt-3">
+            <h1 className="ml-h1">
               Ihr Team soll verwalten.
               <br />
               Nicht{" "}

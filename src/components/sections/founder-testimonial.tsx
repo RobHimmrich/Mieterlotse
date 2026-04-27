@@ -1,10 +1,6 @@
 import Image from "next/image";
-import { Phone } from "lucide-react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { CtaButton } from "@/components/ui/cta-button";
-
-const DEMO_NUMBER_DISPLAY = "+49 7661 9759001";
-const DEMO_NUMBER_HREF = "tel:+4976619759001";
 
 export function FounderTestimonial() {
   return (
@@ -104,19 +100,7 @@ export function FounderTestimonial() {
                 </div>
               </div>
 
-              <div className="mt-10 flex flex-col gap-4 border-t border-[var(--ml-line)] pt-6 sm:flex-row sm:items-center sm:justify-between">
-                <a
-                  href={DEMO_NUMBER_HREF}
-                  className="group inline-flex items-center gap-2.5 text-[14px] font-semibold text-[var(--ml-ink)] transition-colors hover:text-[var(--ml-cta)]"
-                >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--ml-cta-soft)] text-[var(--ml-cta)]">
-                    <Phone size={14} strokeWidth={2.4} fill="currentColor" />
-                  </span>
-                  <span className="font-mono tracking-tight">
-                    {DEMO_NUMBER_DISPLAY}
-                  </span>
-                </a>
-
+              <div className="mt-10 flex justify-end border-t border-[var(--ml-line)] pt-6">
                 <CtaButton href="#final-cta" variant="primary">
                   Erstgespräch mit mir
                 </CtaButton>
@@ -124,82 +108,7 @@ export function FounderTestimonial() {
             </div>
           </div>
         </article>
-
-        {/* Pilot-Testimonial */}
-        <div className="ml-reveal mt-14">
-          <div className="mx-auto flex max-w-[880px] items-center gap-4">
-            <div className="h-px flex-1 bg-[var(--ml-line)]" />
-            <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--ml-ink-whisper)]">
-              Aus der Pilotphase
-            </div>
-            <div className="h-px flex-1 bg-[var(--ml-line)]" />
-          </div>
-
-          <figure className="mx-auto mt-8 max-w-[880px]">
-            <svg
-              aria-hidden
-              width="40"
-              height="30"
-              viewBox="0 0 48 36"
-              className="mx-auto mb-6 text-[var(--ml-cta)]/80"
-              fill="currentColor"
-            >
-              <path d="M0 36V20.4C0 9.6 4.8 3.6 15.6 0L18 4.8C11.4 7.2 7.8 10.8 7.8 16.8H15V36H0zM28.8 36V20.4C28.8 9.6 33.6 3.6 44.4 0L46.8 4.8C40.2 7.2 36.6 10.8 36.6 16.8H43.8V36H28.8z" />
-            </svg>
-
-            <blockquote className="text-center text-[24px] font-extrabold leading-[1.3] tracking-tight text-[var(--ml-ink)] md:text-[30px]">
-              „Ab Montag konnte ich zum ersten Mal seit 14 Monaten mit
-              geschlossenem Laptop essen gehen. Das Büro lief."
-            </blockquote>
-
-            <figcaption className="mt-7 flex flex-col items-center gap-1 text-center">
-              <div className="text-[14px] font-bold text-[var(--ml-ink)]">
-                Geschäftsführung
-              </div>
-              <div className="text-[13px] text-[var(--ml-ink-soft)]">
-                Mietverwaltung · ca. 600 Einheiten · Nordrhein-Westfalen
-              </div>
-            </figcaption>
-
-            <div className="mx-auto mt-10 grid max-w-[640px] grid-cols-3 gap-4 border-t border-[var(--ml-line)] pt-8">
-              <Kpi value="71" unit="%" label="KI-Quote" />
-              <Kpi value="12" unit="Sek." label="Ø Reaktion" />
-              <Kpi value="18" unit="Std." label="Woche zurück" />
-            </div>
-          </figure>
-
-          <p className="ml-whisper mx-auto mt-8 max-w-[520px] text-center">
-            Name und Logo der Pilotverwaltung im Erstgespräch nennbar — öffentlich
-            freigegeben nach offiziellem Launch.
-          </p>
-        </div>
       </div>
     </section>
-  );
-}
-
-function Kpi({
-  value,
-  unit,
-  label,
-}: {
-  value: string;
-  unit: string;
-  label: string;
-}) {
-  return (
-    <div className="text-center">
-      <div className="flex items-baseline justify-center gap-1">
-        <span className="font-mono text-[30px] font-extrabold leading-none text-[var(--ml-ink)] md:text-[36px]">
-          {value}
-        </span>
-        <span className="text-[14px] font-semibold text-[var(--ml-ink-soft)]">
-          {unit}
-        </span>
-      </div>
-      <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ml-ink-whisper)]">
-        {label}
-      </div>
-    </div>
   );
 }

@@ -7,7 +7,7 @@ export function LiveCallWidget() {
   return (
     <div className="mx-auto w-full max-w-[360px]">
       <h3 className="ml-h3 text-center text-[24px] leading-tight">
-        Jetzt kostenlos testen
+        Jetzt kostenlos den KI-Agenten testen
       </h3>
 
       <a href={DEMO_NUMBER_HREF} className="ml-test-btn ml-test-btn-primary mt-6">

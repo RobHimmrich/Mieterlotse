@@ -59,7 +59,7 @@ export function FinalCta() {
               <div>
                 <Eyebrow>Erstgespräch</Eyebrow>
                 <h2 className="ml-h2 mt-4 text-[32px] md:text-[36px]">
-                  30 Minuten, kein Pitch.
+                  10 Minuten reichen.
                   <br />
                   <span className="ml-highlight">Ehrliche Diagnose.</span>
                 </h2>
