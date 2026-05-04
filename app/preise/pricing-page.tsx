@@ -78,8 +78,7 @@ const TIERS: Tier[] = [
     cta: "Pilot starten",
     ctaHref: CALENDLY,
     featured: true,
-    inheritedFromLabel: "Alles aus Starter",
-    baseFeatures: [],
+    baseFeatures: STANDARD_FEATURES,
     newFeatures: ["Mehrere Nutzer & Rollen"],
   },
   {
@@ -92,8 +91,7 @@ const TIERS: Tier[] = [
     tagline: "Für wachsende Verwaltungen mit mehreren Objekten.",
     cta: "Pilot starten",
     ctaHref: CALENDLY,
-    inheritedFromLabel: "Alles aus Professional",
-    baseFeatures: [],
+    baseFeatures: [...STANDARD_FEATURES, "Mehrere Nutzer & Rollen"],
     newFeatures: ["Quartalsweises Optimierungsgespräch"],
   },
   {
@@ -107,8 +105,11 @@ const TIERS: Tier[] = [
     tagline: "Maßgeschneidert für große Strukturen und Konzernverwaltungen.",
     cta: "Kontakt aufnehmen",
     ctaHref: CALENDLY,
-    inheritedFromLabel: "Alles aus Wachstum",
-    baseFeatures: [],
+    baseFeatures: [
+      ...STANDARD_FEATURES,
+      "Mehrere Nutzer & Rollen",
+      "Quartalsweises Optimierungsgespräch",
+    ],
     newFeatures: [],
   },
 ];
