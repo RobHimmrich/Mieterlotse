@@ -57,7 +57,7 @@ const TIERS: Tier[] = [
   {
     key: "starter",
     name: "Starter",
-    units: "bis 150 Wohneinheiten",
+    units: "bis 500 Wohneinheiten",
     monthly: 399,
     setup: 399,
     whatsapp: 59,
@@ -70,7 +70,7 @@ const TIERS: Tier[] = [
   {
     key: "pro",
     name: "Professional",
-    units: "bis 400 Wohneinheiten",
+    units: "bis 1.000 Wohneinheiten",
     monthly: 599,
     setup: 599,
     whatsapp: 79,
@@ -80,18 +80,12 @@ const TIERS: Tier[] = [
     featured: true,
     inheritedFromLabel: "Alles aus Starter",
     baseFeatures: [],
-    newFeatures: [
-      "Mehrere Nutzer & Rollen",
-      "Aufgaben-Zuweisung an Teammitglieder",
-      "Notfall-Weiterleitung an Handwerker",
-      "Status-Tracking & Verlaufshistorie",
-      "Anpassbare Workflows pro Kategorie",
-    ],
+    newFeatures: ["Mehrere Nutzer & Rollen"],
   },
   {
     key: "growth",
     name: "Wachstum",
-    units: "bis 800 Wohneinheiten",
+    units: "bis 2.000 Wohneinheiten",
     monthly: 899,
     setup: 899,
     whatsapp: 99,
@@ -100,17 +94,12 @@ const TIERS: Tier[] = [
     ctaHref: CALENDLY,
     inheritedFromLabel: "Alles aus Professional",
     baseFeatures: [],
-    newFeatures: [
-      "Prioritäts-Support",
-      "Erweiterte Reporting-Exports",
-      "Mehrere Telefonnummern inklusive",
-      "Quartalsweises Optimierungsgespräch",
-    ],
+    newFeatures: ["Quartalsweises Optimierungsgespräch"],
   },
   {
     key: "enterprise",
     name: "Enterprise",
-    units: "800+ Wohneinheiten",
+    units: "ab 2.000 Wohneinheiten",
     monthly: null,
     setup: null,
     priceLabel: "Auf Anfrage",
@@ -120,13 +109,7 @@ const TIERS: Tier[] = [
     ctaHref: CALENDLY,
     inheritedFromLabel: "Alles aus Wachstum",
     baseFeatures: [],
-    newFeatures: [
-      "Mehrmandantenfähigkeit",
-      "Individuelle KI-Logik pro Standort",
-      "ERP/CRM/SAP-Integration",
-      "Dediziertes Onboarding & SLA",
-      "API-Zugriff",
-    ],
+    newFeatures: [],
   },
 ];
 
