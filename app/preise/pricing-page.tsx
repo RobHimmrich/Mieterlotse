@@ -6,8 +6,11 @@ import {
   Phone,
   Languages,
   Star,
-  Plug,
   ArrowRight,
+  MessageCircle,
+  Headphones,
+  Wrench,
+  UserCheck,
 } from "lucide-react";
 import { CtaButton } from "@/components/ui/cta-button";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -24,6 +27,7 @@ type Tier = {
   setup: number | null;
   priceLabel?: string;
   setupLabel?: string;
+  whatsapp?: number;
   tagline: string;
   cta: string;
   ctaHref: string;
@@ -33,36 +37,45 @@ type Tier = {
   newFeatures: string[];
 };
 
+// Standard-Features in jedem Plan — bewusst gleich gehalten,
+// damit der Kunde sieht: das Wichtige bekommt jeder.
+const STANDARD_FEATURES = [
+  "KI-Telefonannahme 24/7",
+  "KI-E-Mail-Verarbeitung",
+  "Unbegrenzte Anrufminuten",
+  "Auf Ihre Verwaltung trainiert (Wissensdatenbank)",
+  "Automatische Klassifizierung & Dringlichkeit",
+  "Individuelle Eskalationslogik & Weiterleitung",
+  "Ticket-Erstellung mit Zusammenfassung",
+  "Web-Dashboard mit KPIs",
+  "Garantierte Support-Antwort innerhalb 24 Std.",
+  "2 Std. Support pro Monat inklusive",
+  "Direkter Ansprechpartner — keine Hotline",
+];
+
 const TIERS: Tier[] = [
   {
     key: "starter",
     name: "Starter",
     units: "bis 150 Wohneinheiten",
-    monthly: 590,
-    setup: 490,
+    monthly: 399,
+    setup: 399,
+    whatsapp: 59,
     tagline: "Sofortige Entlastung – rund um die Uhr.",
-    cta: "Erstgespräch buchen",
+    cta: "Pilot starten",
     ctaHref: CALENDLY,
-    baseFeatures: [
-      "KI-Telefonannahme 24/7",
-      "KI-E-Mail-Verarbeitung",
-      "Unbegrenzte Anrufminuten",
-      "Auf Ihre Verwaltung trainiert (Wissensdatenbank)",
-      "Automatische Klassifizierung & Dringlichkeit",
-      "Ticket-Erstellung mit Zusammenfassung",
-      "Web-Dashboard mit KPIs",
-      "1 Dashboard-Zugang",
-    ],
+    baseFeatures: [...STANDARD_FEATURES, "1 Dashboard-Zugang"],
     newFeatures: [],
   },
   {
     key: "pro",
     name: "Professional",
     units: "bis 400 Wohneinheiten",
-    monthly: 790,
-    setup: 990,
+    monthly: 599,
+    setup: 599,
+    whatsapp: 79,
     tagline: "Anfragen landen automatisch bei der richtigen Person.",
-    cta: "Erstgespräch buchen",
+    cta: "Pilot starten",
     ctaHref: CALENDLY,
     featured: true,
     inheritedFromLabel: "Alles aus Starter",
@@ -73,17 +86,17 @@ const TIERS: Tier[] = [
       "Notfall-Weiterleitung an Handwerker",
       "Status-Tracking & Verlaufshistorie",
       "Anpassbare Workflows pro Kategorie",
-      "Google-Bewertungs-Follow-up",
     ],
   },
   {
     key: "growth",
     name: "Wachstum",
     units: "bis 800 Wohneinheiten",
-    monthly: 1190,
-    setup: 1490,
+    monthly: 899,
+    setup: 899,
+    whatsapp: 99,
     tagline: "Für wachsende Verwaltungen mit mehreren Objekten.",
-    cta: "Erstgespräch buchen",
+    cta: "Pilot starten",
     ctaHref: CALENDLY,
     inheritedFromLabel: "Alles aus Professional",
     baseFeatures: [],
@@ -113,7 +126,6 @@ const TIERS: Tier[] = [
       "ERP/CRM/SAP-Integration",
       "Dediziertes Onboarding & SLA",
       "API-Zugriff",
-      "Persönlicher Ansprechpartner",
     ],
   },
 ];
@@ -128,6 +140,7 @@ export function PricingPage() {
       <PricingGrid billing={billing} />
       <RoiStrip />
       <PilotHow />
+      <ServicePromise />
       <AddOns />
       <TrustBar />
     </>
@@ -327,7 +340,7 @@ function PricingCard({ tier, billing }: { tier: Tier; billing: Billing }) {
 
   const setupLine = (() => {
     if (tier.setup === null) return tier.setupLabel ?? "";
-    const base = `Einrichtung: ${formatPrice(tier.setup)} €`;
+    const base = `Einrichtung ${formatPrice(tier.setup)} € · erst nach erfolgreichem Pilot`;
     return billing === "yearly" ? `${base} · 12. Monat gratis` : base;
   })();
 
@@ -405,6 +418,21 @@ function PricingCard({ tier, billing }: { tier: Tier; billing: Billing }) {
             <FeatureLine key={f} label={f} isNew />
           ))}
         </ul>
+
+        {tier.whatsapp ? (
+          <div className="mt-5 flex items-center gap-2.5 rounded border border-dashed border-[var(--ml-line)] bg-[var(--ml-bg-soft)] px-3 py-2.5 text-[12.5px] text-[var(--ml-ink-soft)]">
+            <span className="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#25D366]/15 text-[#1B7A3F]">
+              <MessageCircle size={12} strokeWidth={2.4} />
+            </span>
+            <span>
+              Optional:{" "}
+              <span className="font-semibold text-[var(--ml-ink)]">
+                WhatsApp-Kanal
+              </span>{" "}
+              + {formatPrice(tier.whatsapp)} € / Monat
+            </span>
+          </div>
+        ) : null}
       </div>
     </div>
   );
@@ -470,7 +498,7 @@ function RoiStrip() {
             </span>{" "}
             — und ist maximal 8 Stunden erreichbar. Mieterlotse übernimmt das{" "}
             <span className="font-semibold text-[var(--ml-ink)]">
-              ab 590 €
+              ab 399 €
             </span>
             , rund um die Uhr, ohne Krankheit oder Urlaub.
           </p>
@@ -545,6 +573,74 @@ function PilotHow() {
   );
 }
 
+/* ─────────────────────────────────────────── 5b. Service-Versprechen */
+
+const PROMISES = [
+  {
+    icon: UserCheck,
+    title: "Direkter Ansprechpartner",
+    body: "Sie haben einen festen Kontakt bei uns — keine anonyme Hotline, kein Ticket-System. Anruf, Mail oder WhatsApp.",
+  },
+  {
+    icon: Wrench,
+    title: "Wir übernehmen die Einrichtung",
+    body: "Wissensbasis, Rufnummer, E-Mail-Anbindung, Eskalationsregeln, Dashboard — komplett von uns aufgesetzt. Sie machen nichts.",
+  },
+  {
+    icon: Headphones,
+    title: "24-Std.-Antwortgarantie",
+    body: "Jede Support-Anfrage wird innerhalb von 24 Stunden beantwortet — werktags wie am Wochenende. Schriftlich nachweisbar.",
+  },
+  {
+    icon: Check,
+    title: "2 Stunden Support pro Monat",
+    body: "Anpassungen, Schulungen, Optimierungen — fest in jedem Plan inklusive. Ohne Aufpreis, ohne Stundennachweis.",
+  },
+];
+
+function ServicePromise() {
+  return (
+    <section className="ml-section bg-[var(--ml-bg-soft)] pt-0">
+      <div className="ml-container">
+        <div className="ml-reveal mx-auto mb-12 max-w-[760px] text-center">
+          <Eyebrow>Unser Service-Versprechen</Eyebrow>
+          <h2 className="ml-h2 mt-4">
+            Persönlich.{" "}
+            <span className="ml-highlight">Verlässlich.</span> Inklusive.
+          </h2>
+          <p className="ml-body mx-auto mt-5 max-w-[58ch] text-[15.5px]">
+            Bei uns bekommen Sie keine SaaS-Black-Box. Wir richten alles für
+            Sie ein, geben Ihnen einen festen Ansprechpartner und garantieren
+            Ihnen schriftlich, wann Sie eine Antwort haben.
+          </p>
+        </div>
+
+        <div className="ml-reveal mx-auto grid max-w-[1000px] gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {PROMISES.map((p) => {
+            const Icon = p.icon;
+            return (
+              <div
+                key={p.title}
+                className="flex flex-col rounded border border-[var(--ml-line)] bg-white p-6"
+              >
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--ml-cta-soft)] text-[var(--ml-cta)]">
+                  <Icon size={18} strokeWidth={2} />
+                </div>
+                <h3 className="mt-5 text-[15px] font-bold tracking-[-0.005em] text-[var(--ml-ink)]">
+                  {p.title}
+                </h3>
+                <p className="mt-2 text-[13.5px] leading-[1.55] text-[var(--ml-ink-soft)]">
+                  {p.body}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─────────────────────────────────────────── 6. Add-Ons */
 
 const ADDONS = [
@@ -568,13 +664,6 @@ const ADDONS = [
     price: "+ 39 €",
     suffix: "/ Monat",
     body: "Automatisches Follow-up nach Anfragen.",
-  },
-  {
-    icon: Plug,
-    title: "CRM-Integration",
-    price: "Auf Anfrage",
-    suffix: "",
-    body: "Anbindung an bestehende Verwaltungssoftware.",
   },
 ];
 
