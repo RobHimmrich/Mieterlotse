@@ -578,7 +578,7 @@ const PROMISES = [
   {
     icon: Check,
     title: "2 Stunden Support pro Monat",
-    body: "Anpassungen, Schulungen, Optimierungen — fest in jedem Plan inklusive. Ohne Aufpreis, ohne Stundennachweis.",
+    body: "Anpassungen und Optimierungen — fest in jedem Plan inklusive. Ohne Aufpreis, ohne Stundennachweis.",
   },
 ];
 

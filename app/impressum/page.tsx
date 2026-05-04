@@ -9,36 +9,56 @@ export const metadata: Metadata = {
 type Entry = { label: string; value: React.ReactNode };
 
 const ENTRIES: Entry[] = [
-  { label: "Name", value: "Robin Himmrich" },
-  { label: "Unternehmensbezeichnung", value: "Immobilienverwaltung Automation" },
+  { label: "Unternehmen", value: "itelly GmbH" },
   {
     label: "Anschrift",
     value: (
       <>
-        c/o Autorenglück #96528
+        Hauptstr. 27
         <br />
-        Albert-Einstein-Str. 47
-        <br />
-        02977 Hoyerswerda
+        79256 Buchenbach
         <br />
         Deutschland
       </>
     ),
   },
+  { label: "Geschäftsführer", value: "Jannik Seven" },
+  {
+    label: "Registereintrag",
+    value: (
+      <>
+        Amtsgericht Freiburg i. Br.
+        <br />
+        HRB 730 688
+      </>
+    ),
+  },
+  { label: "Umsatzsteuer-ID", value: "DE 367 353 373" },
   {
     label: "E-Mail",
     value: (
       <a
-        href="mailto:info@immobilienverwaltung-automation.de"
+        href="mailto:info@itelly.de"
         className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
       >
-        info@immobilienverwaltung-automation.de
+        info@itelly.de
       </a>
     ),
   },
   {
-    label: "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
-    value: "Robin Himmrich (Anschrift wie oben)",
+    label: "Telefon",
+    value: (
+      <a
+        href="tel:+4976619759059"
+        className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
+      >
+        07661 97 59059
+      </a>
+    ),
+  },
+  {
+    label: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+    value: "Jannik Seven (Anschrift wie oben)",
   },
 ];
 
@@ -55,11 +75,31 @@ export default function ImpressumPage() {
             </p>
           </div>
 
-          <div className="ml-reveal mt-12 divide-y divide-[var(--ml-line)] rounded border border-[var(--ml-line)] bg-white">
+          <div className="ml-reveal mt-10 rounded border border-[var(--ml-line)] bg-[var(--ml-bg-soft)] p-6 md:p-7">
+            <div className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-[var(--ml-cta)]">
+              Hinweis zum Anbieter
+            </div>
+            <p className="mt-3 text-[15px] leading-[1.65] text-[var(--ml-ink)]">
+              Die Marken{" "}
+              <span className="font-semibold">Mieterlotse</span> und{" "}
+              <a
+                href="https://immobilienverwaltung-automation.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[var(--ml-cta)] underline-offset-4 hover:underline"
+              >
+                immobilienverwaltung-automation.de
+              </a>{" "}
+              sind Angebote der{" "}
+              <span className="font-semibold">itelly GmbH</span>.
+            </p>
+          </div>
+
+          <div className="ml-reveal mt-8 divide-y divide-[var(--ml-line)] rounded border border-[var(--ml-line)] bg-white">
             {ENTRIES.map((entry) => (
               <div
                 key={entry.label}
-                className="grid gap-2 px-6 py-5 md:grid-cols-[220px_1fr] md:gap-6 md:px-8 md:py-6"
+                className="grid gap-2 px-6 py-5 md:grid-cols-[260px_1fr] md:gap-6 md:px-8 md:py-6"
               >
                 <div className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-[var(--ml-ink-whisper)]">
                   {entry.label}
@@ -81,11 +121,24 @@ export default function ImpressumPage() {
             </LegalBlock>
 
             <LegalBlock title="Haftung für Links">
-              Unser Angebot enthält Links zu externen Webseiten Dritter, auf
-              deren Inhalte wir keinen Einfluss haben. Deshalb können wir für
-              diese fremden Inhalte auch keine Gewähr übernehmen. Für die
-              Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
-              oder Betreiber der Seiten verantwortlich.
+              <span className="block">
+                Unser Angebot enthält Links zu externen Webseiten Dritter, auf
+                deren Inhalte wir keinen Einfluss haben. Deshalb können wir für
+                diese fremden Inhalte auch keine Gewähr übernehmen. Für die
+                Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
+                oder Betreiber der Seiten verantwortlich.
+              </span>
+              <span className="mt-3 block">
+                Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf
+                mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren
+                zum Zeitpunkt der Verlinkung nicht erkennbar.
+              </span>
+              <span className="mt-3 block">
+                Eine permanente inhaltliche Kontrolle der verlinkten Seiten
+                ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung
+                nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden
+                wir derartige Links umgehend entfernen.
+              </span>
             </LegalBlock>
 
             <LegalBlock title="Urheberrecht">
@@ -97,20 +150,23 @@ export default function ImpressumPage() {
             </LegalBlock>
 
             <LegalBlock title="Streitschlichtung">
-              Die Europäische Kommission stellt eine Plattform zur
-              Online-Streitbeilegung (OS) bereit:{" "}
-              <a
-                href="https://ec.europa.eu/consumers/odr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--ml-cta)] underline-offset-4 transition-colors hover:text-[var(--ml-cta-hover)] hover:underline"
-              >
-                https://ec.europa.eu/consumers/odr
-              </a>
-              <br />
-              Wir sind nicht bereit oder verpflichtet, an
-              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-              teilzunehmen.
+              <span className="block">
+                Die Europäische Kommission stellt eine Plattform zur
+                Online-Streitbeilegung (OS) bereit:{" "}
+                <a
+                  href="https://ec.europa.eu/consumers/odr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--ml-cta)] underline-offset-4 transition-colors hover:text-[var(--ml-cta-hover)] hover:underline"
+                >
+                  https://ec.europa.eu/consumers/odr
+                </a>
+              </span>
+              <span className="mt-3 block">
+                Wir sind nicht bereit oder verpflichtet, an
+                Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+                teilzunehmen.
+              </span>
             </LegalBlock>
           </div>
         </div>
@@ -129,7 +185,7 @@ function LegalBlock({
   return (
     <div>
       <h2 className="ml-h3 text-[20px] md:text-[22px]">{title}</h2>
-      <p className="ml-body mt-3 text-[15.5px]">{children}</p>
+      <div className="ml-body mt-3 text-[15.5px]">{children}</div>
     </div>
   );
 }

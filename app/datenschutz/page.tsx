@@ -25,22 +25,30 @@ export default function DatenschutzPage() {
               Verantwortlicher im Sinne der DSGVO
             </div>
             <address className="mt-3 not-italic text-[15px] leading-relaxed text-[var(--ml-ink)]">
-              Immobilienverwaltung Automation · Robin Himmrich
+              itelly GmbH
               <br />
-              c/o Autorenglück #96528
+              Hauptstr. 27
               <br />
-              Albert-Einstein-Str. 47
-              <br />
-              02977 Hoyerswerda
+              79256 Buchenbach
               <br />
               Deutschland
               <br />
+              Geschäftsführer: Jannik Seven
+              <br />
               E-Mail:{" "}
               <a
-                href="mailto:info@immobilienverwaltung-automation.de"
+                href="mailto:info@itelly.de"
                 className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
               >
-                info@immobilienverwaltung-automation.de
+                info@itelly.de
+              </a>
+              <br />
+              Telefon:{" "}
+              <a
+                href="tel:+4976619759059"
+                className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
+              >
+                07661 97 59059
               </a>
             </address>
           </div>
@@ -121,10 +129,10 @@ export default function DatenschutzPage() {
               <p className="mt-4">
                 Widerruf per E-Mail an:{" "}
                 <a
-                  href="mailto:info@immobilienverwaltung-automation.de"
+                  href="mailto:info@itelly.de"
                   className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
                 >
-                  info@immobilienverwaltung-automation.de
+                  info@itelly.de
                 </a>
               </p>
             </Block>
@@ -219,10 +227,10 @@ export default function DatenschutzPage() {
               <p className="mt-4">
                 Zur Ausübung Ihrer Rechte wenden Sie sich an:{" "}
                 <a
-                  href="mailto:info@immobilienverwaltung-automation.de"
+                  href="mailto:info@itelly.de"
                   className="text-[var(--ml-cta)] transition-colors hover:text-[var(--ml-cta-hover)]"
                 >
-                  info@immobilienverwaltung-automation.de
+                  info@itelly.de
                 </a>
               </p>
             </Block>
