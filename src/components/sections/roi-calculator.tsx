@@ -11,10 +11,10 @@ const ASSUMPTIONS = {
   automationRate: 0.7, // 70 % KI-Quote
   mlMonthlyEuro: (units: number) => {
     // Offizielle Preise laut /preise
-    if (units <= 150) return 590; // Starter
-    if (units <= 400) return 790; // Professional
-    if (units <= 800) return 1190; // Wachstum
-    return 1790; // Enterprise-Richtwert (final im Gespräch)
+    if (units <= 500) return 399; // Starter
+    if (units <= 1000) return 599; // Professional
+    if (units <= 2000) return 899; // Wachstum
+    return 1290; // Enterprise-Richtwert (final im Gespräch)
   },
 };
 
@@ -93,7 +93,7 @@ export function RoiCalculator() {
               <input
                 type="range"
                 min={100}
-                max={2000}
+                max={3000}
                 step={50}
                 value={units}
                 onChange={(e) => setUnits(Number(e.target.value))}
@@ -102,10 +102,9 @@ export function RoiCalculator() {
               />
               <div className="mt-2 flex justify-between text-[11px] font-mono text-[var(--ml-ink-whisper)]">
                 <span>100</span>
-                <span>500</span>
                 <span>1.000</span>
-                <span>1.500</span>
                 <span>2.000</span>
+                <span>3.000</span>
               </div>
             </div>
 
