@@ -58,7 +58,7 @@ const TIERS: Tier[] = [
     key: "starter",
     name: "Starter",
     units: "bis 500 Wohneinheiten",
-    monthly: 399,
+    monthly: 499,
     setup: 399,
     whatsapp: 59,
     tagline: "Sofortige Entlastung – rund um die Uhr.",
@@ -71,7 +71,7 @@ const TIERS: Tier[] = [
     key: "pro",
     name: "Professional",
     units: "bis 1.000 Wohneinheiten",
-    monthly: 599,
+    monthly: 650,
     setup: 599,
     whatsapp: 79,
     tagline: "Anfragen landen automatisch bei der richtigen Person.",
@@ -85,7 +85,7 @@ const TIERS: Tier[] = [
     key: "growth",
     name: "Wachstum",
     units: "bis 2.000 Wohneinheiten",
-    monthly: 899,
+    monthly: 999,
     setup: 899,
     whatsapp: 99,
     tagline: "Für wachsende Verwaltungen mit mehreren Objekten.",
@@ -482,7 +482,7 @@ function RoiStrip() {
             </span>{" "}
             — und ist maximal 8 Stunden erreichbar. Mieterlotse übernimmt das{" "}
             <span className="font-semibold text-[var(--ml-ink)]">
-              ab 399 €
+              ab 499 €
             </span>
             , rund um die Uhr, ohne Krankheit oder Urlaub.
           </p>
