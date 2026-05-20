@@ -11,10 +11,10 @@ const ASSUMPTIONS = {
   automationRate: 0.7, // 70 % KI-Quote
   mlMonthlyEuro: (units: number) => {
     // Offizielle Preise laut /preise
-    if (units <= 500) return 399; // Starter
-    if (units <= 1000) return 599; // Professional
-    if (units <= 2000) return 899; // Wachstum
-    return 1290; // Enterprise-Richtwert (final im Gespräch)
+    if (units <= 500) return 499; // Starter
+    if (units <= 1000) return 650; // Professional
+    if (units <= 2000) return 999; // Wachstum
+    return 1490; // Enterprise-Richtwert (final im Gespräch)
   },
 };
 

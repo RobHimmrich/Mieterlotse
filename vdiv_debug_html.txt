@@ -1,0 +1,44 @@
+ PLZ" onfocus="this.value = ''">
+                    <a href="javascript:loadSearchResults()">
+                        <i class="fa nh-ico-vdiv-property-search"></i>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="property-manager-list" id="property-manager-result">
+                        <div class="property-manager-list-item">
+            <div class="grid-100 mobile-grid-100 tablet-grid-100 property-manager-list-title">
+                a-ba-cus Immobilien Management GmbH 
+            </div>
+            <div class="grid-50 mobile-grid-100 tablet-grid-50 property-manager-list-address">
+                Hofaue 75<br>
+                42103 Wuppertal
+            </div>
+            <div class="grid-50 mobile-grid-100 tablet-grid-50 property-manager-list-address">
+                <i class="fa nh-ico-call"></i> 0202 / 283160<br>
+                <i class="fa nh-ico-fax"></i> 0202 / 2831616<br>
+                <i class="fa nh-ico-mail"></i> <a href="mailto:info@a-ba-cus.de">info@a-ba-cus.de</a>
+            </div>
+            <div class="grid-100 mobile-grid-100 tablet-grid-100 property-manager-list-buttons">
+                    <a href="http://www.a-ba-cus.de" class="crbtn crbtn-small" target="_blank">
+                        Zur Webseite <i class="fa nh-ico-vdiv-arrow-right"></i>
+                    </a>
+&nbsp;                                    <a href="#map" onclick="setPinAndZoom(new google.maps.LatLng(51.269779, 7.158449), 'a-ba-cus Immobilien Management GmbH ', 'Hofaue 75', '42103 Wuppertal');" class="crbtn crbtn-small crbtn-darkblue">
+                        Auf Karte zeigen <i class="fa nh-ico-vdiv-arrow-right"></i>
+                    </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="property-manager-list-item">
+            <div class="grid-100 mobile-grid-100 tablet-grid-100 property-manager-list-title">
+                Abraham Service GmbH
+            </div>
+            <div class="grid-50 mobile-grid-100 tablet-grid-50 property-manager-list-address">
+                Bergstraße 17<br>
+                53859 Niederkassel
+            </div>
+            <div class="grid-50 mobile-grid-100 tablet-grid-50 property-manager-list-address">
+                <i class="fa nh-ico-call"></i> 02208 / 94300<br>
+                <i class="fa nh-ico-fax"></i> 02208 / 943011<br>
+                <i class="fa nh-ico-mail"></i> <a href="mailto:info@hv-abraham.de">info@hv-abr
