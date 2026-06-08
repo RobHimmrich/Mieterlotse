@@ -4,6 +4,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { ScrollRevealRoot } from "@/components/ui/scroll-reveal";
 import { CookieBanner } from "@/components/ui/cookie-banner";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Footer />
         <ScrollRevealRoot />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );
